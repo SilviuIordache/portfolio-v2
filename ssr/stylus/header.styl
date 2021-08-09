@@ -4,8 +4,26 @@ header
 .header-item
   color $pf-primary
   cursor pointer
-  display inline
+  display inline-block
   padding-right 1.5rem
+  transition: all .4s ease-in-out
   &:hover
-    text-decoration none
+    text-decoration 1px underline
     color $pf-primary-bright
+
+
+// .header-padding-normal
+
+// .header-padding-small
+//   padding-top 1rem
+//   padding-bottom 1rem
+
+.sticky-header
+  position fixed
+  right 0
+  left 0
+  z-index 999
+
+.hidden-header
+  animation: .5s linear 1s infinite alternate slidein;
+  transform translateY(-3rem)
