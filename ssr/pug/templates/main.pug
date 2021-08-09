@@ -1,0 +1,11 @@
+doctype html
+html.h-100(lang="en")
+  head
+    include ../includes/head.pug
+    block head
+  body.h-100.d-flex.flex-column.pf-bg-muted-dark
+    block header
+      include ../mixins/header.pug
+    block content
+    block footer
+      include ../mixins/footer.pug

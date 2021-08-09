@@ -1,0 +1,33 @@
+mixin project-card(name, authority, releaseDate, image, description, concepts, techStack, projectLink, gitLinks)
+  .row.project-card.mb-4
+    .col-12
+      h3.mb-0=name
+      p.text-muted=authority
+    .col-12.col-md-8
+      img.img-fluid.project-image(src=image)
+    .col-12.col-md-4
+      p.mb-0.font-weight-bold Concepts
+      ul.pl-3
+        each concept in concepts
+          li.text-muted=concept
+    .col-12.col-md-8.mt-4.mb-4
+      p.mb-0.font-weight-bold Description
+      p=description
+    .col-12.col-md-4.mt-4.d-flex.flex-column.justify-content-between
+      .project-info
+        p.mb-0.font-weight-bold Tech stack
+        span.text-muted
+          each tech, index in techStack
+            span=tech
+            if index+1 != techStack.length
+              span  | 
+    .col-12.d-flex.justify-content-between
+      p.mb-0.text-muted=releaseDate
+      .links-container.d-flex.justify-content-end
+        if projectLink
+          a.project-link(href=projectLink target="_blank" rel="noopener" title="See live")
+            i.fas.fa-external-link-alt.mr-1
+        if gitLinks
+          each gitLink in gitLinks
+            a.project-link.ml-3(href=gitLink target="_blank" rel="noopener" title="See repository")
+              i.fab.fa-github.mr-1

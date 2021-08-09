@@ -1,0 +1,77 @@
+.pf-primary-bright {
+  color: #b4cfc8;
+  fill: #b4cfc8;
+}
+.pf-primary {
+  color: #76a79a;
+  fill: #76a79a;
+}
+.pf-primary-dark {
+  color: #304b43;
+  fill: #304b43;
+}
+.pf-secondary-bright {
+  color: #d2a49d;
+  fill: #d2a49d;
+}
+.pf-secondary {
+  color: #a8594d;
+  fill: #a8594d;
+}
+.pf-secondary-muted {
+  color: #542d27;
+  fill: #542d27;
+}
+.pf-white {
+  color: #fbfbf2;
+  fill: #fbfbf2;
+}
+.pf-muted-bright {
+  color: #b5b5b5;
+  fill: #b5b5b5;
+}
+.pf-muted {
+  color: #4d4d4d;
+  fill: #4d4d4d;
+}
+.pf-muted-dark {
+  color: #403f4c;
+  fill: #403f4c;
+}
+.pf-dark {
+  color: #262626;
+  fill: #262626;
+}
+.pf-bg-primary-bright {
+  background-color: #b4cfc8;
+}
+.pf-bg-primary {
+  background-color: #76a79a;
+}
+.pf-bg-primary-dark {
+  background-color: #304b43;
+}
+.pf-bg-secondary-bright {
+  background-color: #d2a49d;
+}
+.pf-bg-secondary {
+  background-color: #a8594d;
+}
+.pf-bg-secondary-muted {
+  background-color: #542d27;
+}
+.pf-bg-white {
+  background-color: #fbfbf2;
+}
+.pf-bg-muted-bright {
+  background-color: #b5b5b5;
+}
+.pf-bg-muted {
+  background-color: #4d4d4d;
+}
+.pf-bg-muted-dark {
+  background-color: #403f4c;
+}
+.pf-bg-dark {
+  background-color: #262626;
+}

@@ -1,0 +1,33 @@
+{
+  "name": "ultra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:stylus && npm run build:pug",
+    "build:pug": "pug ssr/pug/pages --out site/",
+    "build:stylus": "stylus ssr/stylus --out site/css",
+    "watch:pug": "pug -w ssr/pug/pages --out site/",
+    "watch:css": "stylus -w ssr/stylus -o site/css",
+    "watch": "npm run watch:css & npm run watch:pug",
+    "dev": "npm run watch & npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilviuIordache/Ultra.git"
+  },
+  "author": "Silviu Iordache",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SilviuIordache/Ultra/issues"
+  },
+  "homepage": "https://github.com/SilviuIordache/Ultra#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.8"
+  }
+}
