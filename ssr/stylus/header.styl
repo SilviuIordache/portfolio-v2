@@ -1,16 +1,30 @@
 header
   background-color #ededed
 
+.header-li
+  cursor pointer
+  display inline
+  padding-right 1.5rem
+  
 .header-item
+  padding-bottom 0.3rem
+  text-align center
   color $pf-primary
   cursor pointer
   display inline-block
-  padding-right 1.5rem
+  margin-left 0.5rem
+  margin-right 0.5rem
   transition: all .4s ease-in-out
+  border-bottom 0.2rem solid transparent
   &:hover
-    text-decoration 1px underline
+    text-decoration none
     color $pf-primary-bright
 
+.active
+  border-bottom 0.2rem solid $pf-primary-bright
+
+#header-items-container
+  border-bottom 0.05rem solid $pf-muted
 
 .sticky-header
   position fixed
@@ -19,7 +33,3 @@ header
   right 0
   left 0
   z-index 999
-
-.hidden-header
-  animation: .5s linear 1s infinite alternate slidein;
-  transform translateY(-3rem)
