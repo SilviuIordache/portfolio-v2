@@ -8,24 +8,29 @@ block head
 
 block content
   .container.pt-5
-    .row#about
-      .col-12
-        h1.text-center About
-    .row#projects
+    #about.row
+      .col-12.d-flex.justify-content-center.align-items-center
+        section.d-flex
+          .text-container.mr-3.d-flex.align-items-center
+            .inner-text-container.pr-5
+              h1.mb-0.hello-message Hello, my name is
+              p.big-name Silviu Iordache
+              p I like to built quirky things using the web and learn about new stuff
+          .image-container.position-relative
+            img.profile-picture(src="./assets/me.jpeg" width="200" height="200")
+            .circle-container
+    #projects.row
       .col-12
         h1.text-center Projects
-    .row#experience
+    #experience.row
       .col-12
         h1.text-center Experience
-    .row#contact
+    #contact.row
       .col-12
         h1.text-center Contact
-    .row#resume
+    #resume.row
       .col-12
         h1.text-center Resume
-  //- section#intro.d-flex
-  //-   h3.text-center Hello my name is Silviu
-  //-     //- img.rounded-xl.shadow(src="./assets/me.jpg" width="100%")
 
   section#projects-section.container
     
