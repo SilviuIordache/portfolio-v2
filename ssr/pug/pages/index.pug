@@ -8,9 +8,9 @@ block head
 
 block content
   .container.pt-5
-    #about.row
+    section#about.row
       .col-12.d-flex.justify-content-center.align-items-center
-        section.d-flex
+        .d-flex
           .text-container.mr-3.d-flex.align-items-center
             .inner-text-container.pr-5
               h1.mb-0.hello-message Hello, my name is
@@ -19,20 +19,18 @@ block content
           .image-container.position-relative
             img.profile-picture(src="./assets/me.jpeg" width="200" height="200")
             .circle-container
-    #projects.row
+    section#projects.row
       .col-12
         h1.text-center Projects
-    #experience.row
+    section#experience.row
       .col-12
         h1.text-center Experience
-    #contact.row
+    section#contact.row
       .col-12
         h1.text-center Contact
-    #resume.row
+    section#resume.row
       .col-12
         h1.text-center Resume
-
-  section#projects-section.container
     
 
     //- +project-card(
