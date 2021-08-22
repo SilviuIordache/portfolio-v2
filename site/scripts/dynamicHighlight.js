@@ -2,23 +2,32 @@ export function dynamicHighlight() {
   const sections = document.querySelectorAll('section');
   const navItems = document.querySelectorAll('header ul li a');
   
+  //calculate sections offsetTop and heights
+  const secDetails = [];
+  sections.forEach( section => {
+    secDetails.push({
+      name: section.getAttribute('id'),
+      height: section.clientHeight,
+      offsetTop: section.offsetTop
+    })
+  });
+
+  // on scroll, determine which section is currently in view
   window.addEventListener('scroll', () => {
     let current = '';
-    sections.forEach( section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= (sectionTop - sectionHeight/3)) {
-        current = section.getAttribute('id');
-      }
-    }) 
-  
+    current = secDetails.find( (section) => {
+      return section.offsetTop > (pageYOffset - section.height/3)
+    });
+    
+    // highlight in the navitems
     navItems.forEach( navItem => {
+      // remove active class from all
       navItem.classList.remove('active');
-  
-      if(navItem.href.includes(current)) {
+
+      // add active class to the element corresponding to the section in view
+      if(current.name.length > 0 && navItem.href.includes(current.name)) {
         navItem.classList.add('active')
       }
     })
   });
-
 }
