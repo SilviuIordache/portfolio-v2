@@ -1,24 +1,18 @@
 extends ../templates/main.pug
 
-block append header
-  include ../mixins/project-card.pug
-
-block head
-  title Silviu Iordache - Projects
-
 block content
   .container.pt-5
     section#about.row
-      .col-12.d-flex.justify-content-center.align-items-center
-        .d-flex
-          .text-container.mr-3.d-flex.align-items-center
-            .inner-text-container.pr-5
-              h1.mb-0.hello-message Hello, my name is
-              p.big-name Silviu Iordache
-              p I like to built quirky things using the web and learn about new stuff
-          .image-container.position-relative
-            img.profile-picture(src="./assets/me.jpeg" width="200" height="200")
-            .circle-container
+      .col-12.col-md-8
+        .text-container
+          h1.mb-0.hello-message Hello, my name is
+          p.big-name Silviu Iordache
+          span I like to built quirky things using the web and learn about new stuff. I'm currently employed as a full-stack web developer at 
+          a.link(href="www.caphyon.com") Caphyon
+      .col-12.col-md-4
+        .image-container.position-relative
+          img.profile-picture(src="./assets/me.jpeg" width="auto" height="auto")
+          .circle-container
     section#projects.row
       .col-12
         h1.text-center Projects
