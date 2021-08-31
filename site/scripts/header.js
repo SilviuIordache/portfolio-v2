@@ -3,5 +3,5 @@ import { activeHeaderItem } from "./activeHeaderItem.js";
 import { headerScrollHide } from "./headerScrollHide.js";
 
 dynamicHighlight();
-activeHeaderItem();
+// activeHeaderItem();
 // headerScrollHide();
