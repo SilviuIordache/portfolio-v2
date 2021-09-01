@@ -2,22 +2,23 @@ extends ../templates/main.pug
 
 block content
   #content.container
+    //- #cursor
     include ../sections/intro.pug
     include ../sections/about.pug
-    //- #cursor
+    include ../sections/projects.pug
   
-    section#projects.row
-      .col-12
-        h1.text-center Projects
-    section#experience.row
-      .col-12
-        h1.text-center Experience
-    section#contact.row
-      .col-12
-        h1.text-center Contact
-    section#resume.row
-      .col-12
-        h1.text-center Resume
+    //- section#projects.row
+    //-   .col-12
+    //-     h1.text-center Projects
+    //- section#experience.row
+    //-   .col-12
+    //-     h1.text-center Experience
+    //- section#contact.row
+    //-   .col-12
+    //-     h1.text-center Contact
+    //- section#resume.row
+    //-   .col-12
+    //-     h1.text-center Resume
     
 
     //- +project-card(
