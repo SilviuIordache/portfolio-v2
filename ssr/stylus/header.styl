@@ -1,5 +1,27 @@
 header
   background-color #ededed
+  position fixed
+  top 0
+  transition top 0.5s
+  right 0
+  left 0
+  z-index 999
+  background-color $pf-dark
+
+#home-logo
+  cursor pointer
+  margin-bottom 0
+  margin-left 2rem
+  padding 0.4rem 1rem
+  font-size 1.5rem
+  font-weight normal
+  color $pf-primary
+  border 0.2rem solid $pf-primary
+  border-radius 1rem
+  transition: all .2s ease-in-out
+  &:hover
+    background-color alpha($pf-primary-faded, 0.2)
+    text-decoration none
 
 .header-li
   cursor pointer
@@ -23,26 +45,3 @@ header
 .active
   color $pf-white
   border-bottom 0.2rem solid $pf-primary-bright
-
-.sticky-header
-  position fixed
-  top 0
-  transition top 0.5s
-  right 0
-  left 0
-  z-index 999
-
-#home-logo
-  cursor pointer
-  margin-bottom 0
-  margin-left 2rem
-  padding 0.4rem 1rem
-  font-size 1.5rem
-  font-weight normal
-  color $pf-primary
-  border 0.2rem solid $pf-primary
-  border-radius 1rem
-  transition: all .2s ease-in-out
-  &:hover
-    background-color alpha($pf-primary-faded, 0.2)
-    text-decoration none

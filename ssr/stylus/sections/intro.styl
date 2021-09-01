@@ -1,44 +1,7 @@
 #intro
   margin-top 7rem
 
-.hello-message
-  font-size 1rem
-
 .big-name
   font-size 3rem
   color $pf-primary
   margin-bottom 0
-
-.image-container
-  &::after
-    text-align center
-    justify-content center
-    display flex
-    content: ''
-    height 100%
-    width 100%
-    top 0
-    bottom 0
-    left 50%
-    right -50%
-    margin auto
-    position absolute
-    padding 2rem
-    border-radius 50%
-    // border 0.2rem dashed alpha($pf-primary, 0.4)
-    transition 0.5s
-    transform translate(-50%, 0)
-    background-color alpha($pf-primary, 0.4)
-  &:hover
-    &::after
-      background-color transparent
-
-.profile-picture
-  border-radius 50%
-  max-width 100%
-  box-shadow 0 1rem 2rem rgba(0,0,0,.5)
-  filter: sepia(13%)
-  transition 1.5s
-  &:hover
-    filter none
-
