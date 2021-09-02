@@ -1,7 +1,7 @@
 export function dynamicHighlight() {
   const sections = document.querySelectorAll('section');
-  const navItems = document.querySelectorAll('header ul li a');
-  
+  const navItems = document.getElementsByClassName('header-item');
+
   //calculate sections offsetTop and heights
   const secDetails = [];
   sections.forEach( section => {
@@ -20,7 +20,7 @@ export function dynamicHighlight() {
     });
     
     // highlight in the navitems
-    navItems.forEach( navItem => {
+    [...navItems].forEach( navItem => {
       // remove active class from all
       navItem.classList.remove('active');
 
