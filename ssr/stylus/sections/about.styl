@@ -13,20 +13,22 @@
 .profile-picture
   border-radius 50%
   max-width 100%
-  box-shadow 0 1rem 2rem rgba(0,0,0,.5)
+  box-shadow 0 1rem 2rem alpha($pf-dark, 0.8)
   transition 1.5s
-  &::after
-    content:'';
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    background: blue;
-    opacity: 0.1;
+  image-rendering pixelated
 
-
+.profile-pic-overlay
+  cursor pointer
+  border-radius 50%
+  content:'';
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: alpha($pf-primary, 0.5)
+  transition: all .4s ease-in-out
   &:hover
-    filter none
+    background: alpha($pf-primary, 0)
