@@ -16,7 +16,7 @@ export function dynamicHighlight() {
   window.addEventListener('scroll', () => {
     let current = '';
     current = secDetails.find( (section) => {
-      return section.offsetTop > (pageYOffset - section.height/3)
+      return section.offsetTop > (pageYOffset - section.height / 3 )
     });
     
     // highlight in the navitems
