@@ -22,8 +22,8 @@ mixin project-card(name, authority, releaseDate, image, description, concepts, t
     //-       li.pf-muted-faded=concept
     .mt-4.mb-4
       p.pf-muted-bright=description
-    .d-flex.justify-content-between.align-items-center.border-top.mt-3.pt-3
-      .tech-stack-container
+    .tech-stack-container.d-flex.justify-content-between.align-items-center.mt-3.pt-3
+      .inner-container
         each tech, index in techStack
           .tech-item.mr-2.mb-1=tech
       
