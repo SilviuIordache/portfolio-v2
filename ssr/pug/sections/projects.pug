@@ -1,64 +1,99 @@
 include ../mixins/project-card.pug
 
-section#projects.row
-  .col-12
-    h2.pf-primary Projects
-
-  .col-12.col-md-6
-    +project-card(
-      'Portfolio v1',
+section#projects
+  h2.pf-primary.mb-3 Projects
+  .row.mb-3
+    .col-12.col-md-6.mb-3
+      +project-card(
+        'Portfolio v2',
+        'personal',
+        '2021-07-20',
+        '/assets/projects/portfoliov2.png',
+        'The second iteration of my portfolio. This version uses a dark theme and a better UX with smooth animations, custom scroll, a hamburger menu for mobile and much more',
+        ['Pug mixin templates', 'Responsive website'],
+        ['Pug', 'Stylus', 'Bootstrap', 'Netlify'],
+        '',
+        ['https://github.com/SilviuIordache/portfolio-v2']
+      )
+    .col-12.col-md-6.mb-3
+      +project-card(
+        'Portfolio v1',
+        'personal',
+        '2021-07-20',
+        '/assets/projects/portfolio.png',
+        'A portfolio website of my notable work in web development. This page uses no Javascript in order to stay performant.',
+        ['Pug mixin templates', 'Responsive website'],
+        ['Pug', 'Stylus', 'Bootstrap', 'Netlify'],
+        '',
+        ['https://github.com/SilviuIordache/portfolio-v1']
+      )
+  .row.mb-3
+    .col-12.col-md-6.mb-3
+      +project-card(
+        'Grow Happy',
+        'personal',
+        '2021-07-18',
+        '/assets/projects/grow-happy.png',
+        'A self reflection tool that lets you evaluate key areas of your life, set goals and see how your hapiness growth evolves over time. Hapiness evolution is visualized with charts.',
+        ['Data mapped with Chartjs', 'User system', 'Responsive web application'],
+        ['Vue.js', 'Pug', 'Stylus', 'Bootstrap', 'Google Firestore', 'Chart.js', 'Heroku'],
+        'https://grow-happy.herokuapp.com/',
+        ['https://github.com/SilviuIordache/grow']
+      )
+    .col-12.col-md-6.mb-3
+      +project-card(
+        'Bytes Route',
+        'Caphyon',
+        '2020-09-10',
+        '/assets/projects/bytes-route.png',
+        'A solution for building and deploying product tours without code for websites and web-applications. Consists of a Vue.js dashboard, a Chrome extension used as the tour builder, a script for integrating with your website, a Node.js backend and a presentation website',
+        ['Large-scale Vue.js app','User-generated content', 'Onboarding experience', 'User auth system', 'Codeless Product Tour SaaS', 'Team management system', 'Theme style editing', 'Unit tests'],
+        ['Vue.js', 'Bootstrap', 'Stylus', 'Pug', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Jest', 'Vue-Test-Utils', 'Mocha & Chai', 'Heroku'],
+        'https://www.bytesroute.com/',
+        ''
+      )
+  .row.mb-3
+    .col-12.col-md-6.mb-3
+      +project-card(
+      'Simon game',
       'personal',
-      '2021-07-20',
-      '/assets/projects/portfolio.png',
-      'A portfolio website of my notable work in web development. This page uses no Javascript in order to stay performant.',
-      ['Pug mixin templates', 'Responsive website'],
-      ['Pug', 'Stylus', 'Bootstrap', 'Netlify'],
-      '',
-      ['https://github.com/SilviuIordache/Ultra']
+      '2020-06-20',
+      '/assets/projects/simon.png',
+      'A clone of the classic memory game Simon. The game consist of multiple succesive rounds. Each round you will have to memorize a sequence colors. After the memorization phase, you will enter the guessing phase where you will have to replicate the sequence. The game starts easy with just a short sequence, but gradually gets harder as you progress, each round adding 1 more color to remember.',
+      ['SOLID architecture', 'finite state machine', 'sound object manipulations'],
+      ['Vanilla JS', 'CSS', 'HTML', 'Netlify'],
+      'https://laughing-dubinsky-d5bafe.netlify.app/',
+      ['https://github.com/SilviuIordache/simon']
     )
+    .col-12.col-md-6.mb-3
+      +project-card(
+        'Bike Store',
+        'personal',
+        '2020-04-17',
+        '/assets/projects/bike-store.png',
+        'Full-stack application: An online bike store that lets admins upload new product to the store. Functionality for a shopping cart is also implemented',
+        ['Image upload in forms with preview and size validations', 'Responsive web-design', 'Shopping cart implementation', ' RESTful API implementation','image hosting in a cloud-based service (Cloudinary)'],
+        ['Vue.js', 'Pug', 'Stylus', 'Bootstrap', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Heroku', 'Cloudinary'],
+        'https://bikestore-fe.herokuapp.com/',
+        ['https://github.com/SilviuIordache/bikestore-fe', 'https://github.com/SilviuIordache/bikestore-be']
+      )
+    
+    //- GO LIVE WITHOUT THESE V (CAUSE PROPERLY DOING THEM WILL TAKE A WHILE, about 30-60 mins each x 10 = 10 hours)
+    .col-12
+      p Professional projects I worked on as a game developer
+      ul
+        li NFS: Payback
+        li NFS: Heat
+        li Assassins' Creed Pirates
+        li Driver: Speedboat Paradise
 
-  .col-12.col-md-6
-    +project-card(
-      'Grow Happy',
-      'personal',
-      '2021-07-18',
-      '/assets/projects/grow-happy.png',
-      'A self reflection tool that lets you evaluate key areas of your life, set goals and see how your hapiness growth evolves over time. Hapiness evolution is visualized with charts.',
-      ['Data mapped with Chartjs', 'User system', 'Responsive web application'],
-      ['Vue.js', 'Pug', 'Stylus', 'Bootstrap', 'Google Firestore', 'Chart.js', 'Heroku'],
-      'https://grow-happy.herokuapp.com/',
-      ['https://github.com/SilviuIordache/grow']
-    )
+      p Small games I scripted
 
-  .col-12
-    +project-card(
-      'Bytes Route',
-      'Caphyon',
-      '2020-09-10',
-      '/assets/projects/bytes-route.png',
-      'A solution for building and deploying product tours without code for websites and web-applications. Consists of a Vue.js dashboard, a Chrome extension used as the tour builder, a script for integrating with your website, a Node.js backend and a presentation website',
-      ['Large-scale Vue.js app','User-generated content', 'Onboarding experience', 'User auth system', 'Codeless Product Tour SaaS', 'Team management system', 'Theme style editing', 'Unit tests'],
-      ['Vue.js', 'Bootstrap', 'Stylus', 'Pug', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Jest', 'Vue-Test-Utils', 'Mocha & Chai', 'Heroku'],
-      'https://www.bytesroute.com/',
-      ''
-    )
-  
-  //- GO LIVE WITHOUT THESE V (CAUSE PROPERLY DOING THEM WILL TAKE A WHILE, about 30-60 mins each x 10 = 10 hours)
-  .col-12
-    p Professional projects I worked on as a game developer
-    ul
-      li NFS: Payback
-      li NFS: Heat
-      li Assassins' Creed Pirates
-      li Driver: Speedboat Paradise
-
-    p Small games I scripted
-
-    ul
-      li FAR (an attempt at an improved Space Rogue with better AI)
-      li Space Rogue (Bachelor Project, roguelike, procedural generation)
-      li Towers ( won 3rd place at EA internal Game Jam - 500E, team of 3)
-      li Brawl ( won 2nd place at EA Internal Game Jam - 500E, solo)
-      li Ship the Sheep (Ludum Dare)
-      li Honey Badger (internal Game Jam at Ubisoft)
-      li Mini LD 55 (Ludum Dare)
+      ul
+        li FAR (an attempt at an improved Space Rogue with better AI)
+        li Space Rogue (Bachelor Project, roguelike, procedural generation)
+        li Towers ( won 3rd place at EA internal Game Jam - 500E, team of 3)
+        li Brawl ( won 2nd place at EA Internal Game Jam - 500E, solo)
+        li Ship the Sheep (Ludum Dare)
+        li Honey Badger (internal Game Jam at Ubisoft)
+        li Mini LD 55 (Ludum Dare)
