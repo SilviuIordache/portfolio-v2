@@ -6,11 +6,11 @@ mixin project-card(name, authority, releaseDate, image, description, concepts, t
       .links-container.d-flex.justify-content-end.align-items-center
         if projectLink
           a.project-link(href=projectLink target="_blank" rel="noopener" title="See live")
-            i.fas.fa-external-link-alt.mr-1
+            i.fas.fa-external-link-alt
         if gitLinks
           each gitLink in gitLinks
             a.project-link.ml-3(href=gitLink target="_blank" rel="noopener" title="See repository")
-              i.fab.fa-github.mr-1
+              i.fab.fa-github
     p.pf-muted-bright=authority
     .img-container.position-relative
       img.img-fluid.project-image(src=image)
