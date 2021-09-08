@@ -38,10 +38,15 @@
 
 .project-link
   font-size 1.5rem
-  color gray
+  color $pf-muted-bright
+  transition: all .2s ease-in-out
+  &:hover
+    color $pf-white
+    transform translateY(-2%)
 
 .tech-stack-container
   border-top 1px solid $pf-muted-bright
+
 .tech-item
   font-size 0.8rem
   border 1px solid $pf-secondary
@@ -52,3 +57,4 @@
   transition: all .2s ease-in-out
   &:hover
     background-color alpha($pf-white, 0.1)
+    transform translateY(-6%)
