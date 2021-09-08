@@ -2,7 +2,7 @@ mixin project-card(name, authority, releaseDate, image, description, concepts, t
   .project-card.h-100
     .d-flex.justify-content-between
       .left-container
-        h3.mb-0.pf-secondary=name
+        a.project-name.mb-0.pf-secondary(href=projectLink target="_blank" rel="noopener")=name
         p.pf-muted-bright=authority
       .links-container.d-flex.justify-content-end
         if projectLink
