@@ -3,8 +3,7 @@ mixin project-card(name, authority, releaseDate, image, description, concepts, t
     .d-flex.justify-content-between
       .left-container
         a.project-name.mb-0.pf-secondary(href=projectLink target="_blank" rel="noopener")=name
-        p.pf-muted-bright=authority
-      .links-container.d-flex.justify-content-end
+      .links-container.d-flex.justify-content-end.align-items-center
         if projectLink
           a.project-link(href=projectLink target="_blank" rel="noopener" title="See live")
             i.fas.fa-external-link-alt.mr-1
@@ -12,6 +11,7 @@ mixin project-card(name, authority, releaseDate, image, description, concepts, t
           each gitLink in gitLinks
             a.project-link.ml-3(href=gitLink target="_blank" rel="noopener" title="See repository")
               i.fab.fa-github.mr-1
+    p.pf-muted-bright=authority
     .img-container.position-relative
       img.img-fluid.project-image(src=image)
       a.image-overlay(href=projectLink target="_blank" rel="noopener")
