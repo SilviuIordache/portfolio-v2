@@ -13,7 +13,7 @@ mixin project-card(name, authority, releaseDate, image, description, concepts, t
               i.fab.fa-github
     p.pf-muted-bright=authority
     .img-container.position-relative
-      img.img-fluid.project-image(src=image)
+      img.project-image.img-fluid(src=image)
       a.image-overlay(href=projectLink target="_blank" rel="noopener")
     //- .col-12.mt-4
     //-   p.mb-1.font-weight-bold.pf-secondary Concepts
