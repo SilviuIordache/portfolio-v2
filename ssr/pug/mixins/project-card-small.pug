@@ -2,11 +2,11 @@ mixin project-card-small(title, authority, image, description, responsibilities,
   .project-card.h-100
     .d-flex.justify-content-between
       .left-container
-        a.project-name.mb-0.pf-secondary(href=projectLink target="_blank" rel="noopener")=title
+        a.project-name.mb-0.pf-secondary(href=projectLink target='_blank' rel='noopener')=title
     p.pf-muted-bright=authority
     .img-container.position-relative
       img.img-fluid.project-image(src=image)
-      a.image-overlay(href=projectLink target="_blank" rel="noopener")
+      a.image-overlay(href=projectLink target='_blank' rel='noopener')
     .mt-4.mb-4
       p.pf-muted-bright=description
     .tech-stack-container.d-flex.justify-content-between.align-items-center.mt-3.pt-3
