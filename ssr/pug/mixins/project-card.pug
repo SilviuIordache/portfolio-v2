@@ -12,14 +12,10 @@ mixin project-card(name, authority, releaseDate, image, description, concepts, t
             a.project-link.ml-3(href=gitLink target="_blank" rel="noopener" title="See repository")
               i.fab.fa-github
     p.pf-muted-bright=authority
-    .img-container.position-relative
+    .project-image-container.position-relative
       img.project-image.img-fluid(src=image)
-      a.image-overlay(href=projectLink target="_blank" rel="noopener")
-    //- .col-12.mt-4
-    //-   p.mb-1.font-weight-bold.pf-secondary Concepts
-    //-   ul.pl-3
-    //-     each concept in concepts
-    //-       li.pf-muted-faded=concept
+      a.project-image-overlay(href=projectLink target="_blank" rel="noopener")
+        p.project-details-word Details
     .mt-4.mb-4
       p.pf-muted-bright=description
     .tech-stack-container.d-flex.justify-content-between.align-items-center.mt-3.pt-3

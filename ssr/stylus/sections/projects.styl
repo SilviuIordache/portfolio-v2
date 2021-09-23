@@ -15,26 +15,51 @@
   &:hover
     color $pf-muted-faded
 
-.project-image
+.project-image-container
+  overflow hidden
   border-radius 0.5rem
-  transition all .4s ease-in-out
-  box-shadow 0 2px 4px 0 rgba(0,0,0,0.2)
-  position relative
+
+  &:hover .project-image
+    transform: scale(1.05)
+    transform-origin: 50% 50%
+  &:hover .project-details-button
+    opacity 1
+
+  .project-image
+    transition all .5s ease-in-out
+    box-shadow 0 2px 4px 0 rgba(0,0,0,0.2)
+    position relative
+    filter grayscale(50%)
+
+  .project-image-overlay
+    text-decoration none
+    display flex
+    justify-content center
+    align-items center
+    border-radius 0.5rem
+    cursor pointer
+    color $pf-white
+    content ""
+    width 100%
+    height 100%
+    background-color alpha($pf-primary-dark, 0.2)
+    position absolute
+    top 0
+    left 0
+    transition: all .4s ease-in-out
+    vertical-align middle
+    &:hover
+      background-color alpha($pf-primary-dark, 0.7)
+    &:hover .project-details-word
+      opacity 1
     
-.image-overlay
-  border-radius 0.5rem
-  cursor pointer
-  content ""
-  display block
-  width 100%
-  height 100%
-  background-color alpha($pf-primary-dark, 0.5)
-  position absolute
-  top 0
-  left 0
-  transition: all .4s ease-in-out
-  &:hover
-    background-color alpha($pf-primary-bright, 0)
+    .project-details-word
+      background-color alpha($pf-primary-dark, 0.8)
+      border 0.1rem solid $pf-white
+      padding 0.7rem 1.6rem
+      border-radius 0.8rem
+      transition: all .4s ease-in-out
+      opacity 0
 
 .project-link
   font-size 1.5rem
