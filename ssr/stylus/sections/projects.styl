@@ -55,11 +55,13 @@
     
     .project-details-word
       background-color alpha($pf-primary-dark, 0.8)
-      border 0.1rem solid $pf-white
       padding 0.7rem 1.6rem
+      border 1px solid transparent
       border-radius 0.8rem
       transition: all .4s ease-in-out
       opacity 0
+      &:hover
+        border 1px solid $pf-white
 
 .project-link
   font-size 1.5rem
