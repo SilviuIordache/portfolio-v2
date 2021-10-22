@@ -1,12 +1,14 @@
-doctype html
 html.h-100(lang="en")
   head
-    include ../includes/head.pug
     block head
-  body.h-100.d-flex.flex-column.pf-bg-muted-dark
+      include ../includes/head.pug
+      include ../includes/presentation-scripts.pug
+      include ../includes/common-scripts.pug
+  body.h-100.d-flex.flex-column
     block header
       include ../includes/header.pug
+      +header(true)
     block content
     block footer
       include ../includes/footer.pug
-    include ../includes/top.pug
+      //- include ../includes/top.pug

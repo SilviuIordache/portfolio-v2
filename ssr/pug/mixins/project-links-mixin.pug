@@ -1,0 +1,10 @@
+
+mixin project-links-mixin(liveLink, gitLinks)
+  .links-container.d-flex.align-items-center.ml-4
+    if liveLink
+      a.project-link(href=liveLink target="_blank" rel="noopener" title="View project live")
+        i.fas.fa-external-link-alt
+    if gitLinks
+      each gitLink in gitLinks
+        a.project-link.ml-3(href=gitLink target="_blank" rel="noopener" title="View project repository")
+          i.fab.fa-github

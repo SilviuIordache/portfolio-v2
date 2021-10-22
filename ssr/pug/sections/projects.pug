@@ -1,79 +1,70 @@
 include ../mixins/project-card.pug
 
-section#projects
-  .section-title PROJECTS
-  .row.mb-3
-    .col-12.col-md-6.mb-3
-      +project-card(
-        'Portfolio v2',
-        'personal',
-        '2021-07-20',
-        '/assets/projects/portfoliov2.png',
-        'The second iteration of my portfolio. This version uses a dark theme, nicer project cards, improved sections, smoother animations, custom scroll-bar, a hamburger menu for mobile and much more',
-        ['Pug mixin templates', 'Responsive website'],
-        ['Pug', 'Stylus', 'Bootstrap', 'Netlify'],
-        '',
-        ['https://github.com/SilviuIordache/portfolio-v2']
-      )
-    .col-12.col-md-6.mb-3
-      +project-card(
-        'Portfolio v1',
-        'personal',
-        '2021-07-20',
-        '/assets/projects/portfolio.png',
-        'A portfolio website of my notable work in web development. This page uses no javascript in order to stay performant.',
-        ['Pug mixin templates', 'Responsive website'],
-        ['Pug', 'Stylus', 'Bootstrap', 'Netlify'],
-        'https://silviu-portfolio.netlify.app/',
-        ['https://github.com/SilviuIordache/portfolio-v1']
-      )
-  .row.mb-3
-    .col-12.col-md-6.mb-3
-      +project-card(
-        'Grow Happy',
-        'personal',
-        '2021-07-18',
-        '/assets/projects/grow-happy.png',
-        'A self reflection tool that lets you evaluate key areas of your life, set goals and see how your hapiness growth evolves over time. Happiness evolution is visualized with charts.',
-        ['Data mapped with Chartjs', 'User system', 'Responsive web application'],
-        ['Vue.js', 'Pug', 'Stylus', 'Bootstrap', 'Google Firestore', 'Chart.js', 'Heroku'],
-        'https://grow-happy.herokuapp.com/',
-        ['https://github.com/SilviuIordache/grow']
-      )
-    .col-12.col-md-6.mb-3
-      +project-card(
-        'Bytes Route',
-        'Caphyon',
-        '2020-09-10',
-        '/assets/projects/bytes-route.png',
-        'A solution for building and deploying product tours without code for websites and web-applications. Consists of a Vue.js dashboard, a Chrome extension used as the tour builder, a script for integrating with your website, a Node.js backend and a presentation website',
-        ['Large-scale Vue.js app','User-generated content', 'Onboarding experience', 'User auth system', 'Codeless Product Tour SaaS', 'Team management system', 'Theme style editing', 'Unit tests'],
-        ['Vue.js', 'VueX', 'Bootstrap', 'Stylus', 'Pug', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Jest', 'Vue-Test-Utils', 'Mocha & Chai', 'Heroku'],
-        'https://www.bytesroute.com/',
-        ''
-      )
-  .row.mb-3
-    .col-12.col-md-6.mb-3
-      +project-card(
-      'Simon game',
-      'personal',
-      '2020-06-20',
-      '/assets/projects/simon.png',
-      'A clone of the classic memory game, Simon-says. The game consist of multiple succesive rounds, each round adding 1 more color to the chain you have to memorize. See how far you can go using just your memory. The game also contains audio cues for each color (recorded by me).',
-      ['SOLID architecture', 'finite state machine', 'sound object manipulations'],
-      ['Vanilla JS', 'CSS', 'HTML', 'Netlify'],
-      'https://simon-silviu.netlify.app/',
-      ['https://github.com/SilviuIordache/simon']
-    )
-    .col-12.col-md-6.mb-3
-      +project-card(
-        'Bike Store',
-        'personal',
-        '2020-04-17',
-        '/assets/projects/bike-store.png',
-        'Full-stack application: An online bike store that lets admins upload new products to the store. Functionality for a shopping cart is also implemented',
-        ['Image upload in forms with preview and size validations', 'Responsive web-design', 'Shopping cart implementation', ' RESTful API implementation','image hosting in a cloud-based service (Cloudinary)'],
-        ['Vue.js', 'Pug', 'Stylus', 'Bootstrap', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Heroku', 'Cloudinary'],
-        'https://bikestore-fe.herokuapp.com/',
-        ['https://github.com/SilviuIordache/bikestore-fe', 'https://github.com/SilviuIordache/bikestore-be']
-      )
+section#projects.row
+  .col-12
+    .section-title PROJECTS
+  
+  +project-card(
+    'Bytes Route',
+    'Caphyon',
+    '/projects/bytes-route.html',
+    '/assets/projects/bytesroute/brt-dashboard-1.png',
+    ['Vue.js', 'Node.js', 'MongoDB'],
+    'https://www.bytesroute.com/',
+    ''
+  )
+
+  +project-card(
+    'Grow Happy',
+    'side project',
+    '/projects/grow-happy.html',
+    '/assets/projects/grow-happy/grow-happy.png',
+    ['Vue.js', 'Firestore', 'Chart.js'],
+    'https://grow-happy.herokuapp.com/',
+    ['https://github.com/SilviuIordache/grow']
+  )
+
+
+  +project-card(
+    'Bike Store',
+    'personal',
+    '/projects/bike-store.html',
+    '/assets/projects/bikestore/bike-store.png',
+    ['Vue.js', 'Node.js', 'MongoDB'],
+    'https://bikestore-fe.herokuapp.com/',
+    ['https://github.com/SilviuIordache/bikestore-fe', 'https://github.com/SilviuIordache/bikestore-be']
+  )
+
+  +project-card(
+    'Portfolio v2',
+    'side project',
+    '/projects/portfolio-website-v2.html',
+    '/assets/projects/portfolio2/portfoliov2.png',
+    ['Pug', 'Stylus', 'JavaScript'],
+    '/',
+    ['https://github.com/SilviuIordache/portfolio-v2']
+  )
+
+  +project-card(
+    'Simon game',
+    'side project',
+    '/projects/simon.html',
+    '/assets/projects/simon/simon.png',
+    ['Javascript', 'HTML/CSS'],
+    'https://simon-silviu.netlify.app/',
+    ['https://github.com/SilviuIordache/simon']
+  )
+
+  +project-card(
+    'Portfolio v1',
+    'side project',
+    '/projects/portfolio-website-v1.html',
+    '/assets/projects/portfolio1/portfoliov1.png',
+    ['Pug','Stylus', 'JavaScript'],
+    'https://silviu-portfolio.netlify.app/',
+    ['https://github.com/SilviuIordache/portfolio-v1']
+  )
+
+  
+
+  

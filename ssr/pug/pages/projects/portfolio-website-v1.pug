@@ -1,0 +1,41 @@
+extends ../../templates/project-details.pug
+include ../../mixins/project-image.pug
+include ../../mixins/project-links-mixin.pug
+
+block project-content
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      .d-flex.justify-content-between
+        p.project-details-title Portfolio website v1
+        +project-links-mixin(
+          'https://silviu-portfolio.netlify.app/', ['https://github.com/SilviuIordache/portfolio-v1'])
+
+      p.pf-muted-bright side project
+
+      .tech-item Pug
+      .tech-item Stylus
+      .tech-item Bootstrap
+      .tech-item GitHub
+      .tech-item Netlify
+
+      p.pf-white.mt-4 The first iteration of my portfolio website. This version was basic, but it would represent the foundation upon which I improved with further iterations.
+
+      a.filled-cta(href='https://silviu-portfolio.netlify.app/' target="_blank" rel="noopener") See live
+
+    .col-12.col-md-6
+      +project-image('/assets/projects/portfolio1/portfoliov1.png', 'Portfolio website screenshot')
+
+
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/projects/portfolio1/about-page.png', 'Portfolio website screenshot')
+
+    .col-12.col-md-6.mb-5
+      h3.project-heading Features
+      ul.pf-muted-faded.pl-3
+        li pug mixin templates
+        li responsive website
+        li project cards
+        li no javascript used
+        li about page
+    

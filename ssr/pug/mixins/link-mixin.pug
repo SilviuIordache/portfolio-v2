@@ -1,0 +1,6 @@
+mixin link-mixin(url, text)
+  a.link(href=url target="_blank" rel="noopener")
+    if text
+      span=text
+    else
+      span=url

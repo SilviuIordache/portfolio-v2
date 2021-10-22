@@ -1,0 +1,119 @@
+extends ../../templates/project-details.pug 
+include ../../mixins/project-image.pug
+include ../../mixins/project-links-mixin.pug
+include ../../mixins/link-mixin.pug
+
+block project-content
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      .d-flex.justify-content-between
+        p.project-details-title Bytes Route
+        +project-links-mixin(
+          'https://www.bytesroute.com/')
+      p.pf-muted-bright.mb-2 Caphyon
+      .tech-item Vue.js
+      .tech-item VueRouter
+      .tech-item VueX
+      .tech-item Pug
+      .tech-item Stylus
+      .tech-item Bootstrap
+      .tech-item Node.js
+      .tech-item Express
+      .tech-item MongoDB
+      .tech-item Mongoose
+      .tech-item Vue-Test-Utils
+      .tech-item Jest
+      .tech-item GitLab
+      .tech-item Heroku
+
+      .pf-white.mt-4 
+        p Bytes Route is a free SaaS for building and deploying product tours for websites and web-applications, without any coding background. It consists of a Vue.js dashboard, a Chrome extension used as the tour builder, a script for integrating with your website, a Node.js backend and a presentation website
+      
+      a.filled-cta(href='https://www.bytesroute.com/' target="_blank" rel="noopener") See live
+
+    .col-12.col-md-6
+      +project-image('/assets/projects/bytesroute/brt-dashboard-1.png', 'A view of the dashboard app')
+
+  .row.pf-white.project-section
+    .col-12.mb-3
+      h3.project-heading.mb-2 Sub-projects
+      p.pf-white Bytes Route consists of several sub-projects:
+    .col-12.col-md-6.mb-3
+      h5.pf-primary Website
+      p.mb-0 A presentation website containing info about the product, built with vanilla JS, pug and stylus. Features a main page, a blog and docs.
+      +link-mixin('https://www.bytesroute.com')
+    .col-12.col-md-6.mb-4
+      h5.pf-primary Dashboard app
+      p.mb-0 An front-end app built with Vue.Js where users authenticate, manage created product tours, manage team members, custom styles and more.
+      +link-mixin('https://www.bytesroute.com/app')
+    .col-12.col-md-6.mb-4
+      h5.pf-primary Tour creator
+      p.mb-0 This is a Chrome extension that Bytes Route clients use to build, edit and test tours for their websites. This was built with Vuejs, vanillaJS, pug and stylus.
+      +link-mixin('https://chrome.google.com/webstore/detail/bytes-route-free-digital/kfdoklilbkbflmbmkinaojhdhkojlhbh?hl=en', 'Chrome extension')
+    .col-12.col-md-6.mb-4
+      h5.pf-primary Backend (API)
+      p.mb-0 Built with Nodejs, Express, MongoDB and Mongoose. Responsible for CRUD operations called from the Dashboard app and the Chrome extension
+    .col-12.col-md-6.mb-4
+      h5.pf-primary Script
+      p.mb-0 The script is written in VanillaJS. It is responsible for tour creation and tour running. Bytes Route users receive a script with a custom id that they can integrate in their apps to enable tours running on Bytes Route..
+
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/projects/bytesroute/brt-analytics.png')
+
+    .col-12.col-md-6.mb-5
+      h3.project-heading Features
+      ul.pf-muted-faded.pl-3
+        li large-scale Vue.js app
+        li back-end API using Node.js and Express
+        li user-generated content: product tours
+        li Chrome extension addon: used to build tours
+        li user authenthication system
+        li team management system
+        li theme style editing, edit the color scheme of the tour pop-ups to match your brand identity
+        li multilanguage feature, set your tours to run in multiple languages
+        li unit tests
+    
+  .row.project-section
+    .col-12
+      h3.project-heading Screenshots
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-dashboard-1.png', 'The dashboard app')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-dashboard-2.png', 'The dashboard app minimized')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-analytics.png', 'Tour analytics page')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-tours.png', 'A view of the product tours page')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-team.png', 'Team management view')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-theme-creation.png', 'Theme creation editor')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-auth.png', 'Login form')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-custom-popup.png', 'A custom pop-up')
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-bubble.png', 'Tour launcher widget')
+
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-how-it-works.png', 'Presentation page: how it works')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-landing.png', 'Presentation page: landing page')
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-step-creation.png', 'Tagging elements with the script')
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-tour-finalize.png', 'Tour creation final menu')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-tour-run.png', 'A created tour, in action')
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-blog.png', 'Blog posts page')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bytesroute/brt-docs.png', 'Product documentation')
+

@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/SilviuIordache/Ultra#readme",
   "dependencies": {
+    "@splidejs/splide": "^2.4.21",
     "express": "^4.17.1",
     "pug": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6",

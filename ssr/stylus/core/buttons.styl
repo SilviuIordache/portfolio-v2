@@ -1,0 +1,27 @@
+.cta
+  cursor pointer
+  display inline-block
+  border 1px solid $pf-primary
+  color $pf-primary !important
+  background-color transparent
+  font-size 1.2rem
+  padding 0.7rem 1.4rem
+  border-radius 0.8rem
+  transition: all .2s ease-in-out 
+  &:hover
+    background-color alpha($pf-primary, 0.5)
+
+.filled-cta
+  display inline-block
+  cursor pointer
+  background-color $pf-primary-dark
+  color $pf-white !important
+  font-size 1.2rem
+  padding 0.7rem 1.4rem
+  border-radius 0.8rem
+  border none
+  transition: all .2s ease-in-out
+  text-decoration none
+  &:hover
+    text-decoration none
+    transform scale(1.05)

@@ -1,0 +1,75 @@
+extends ../../templates/project-details.pug 
+include ../../mixins/project-image.pug
+include ../../mixins/project-links-mixin.pug
+include ../../mixins/link-mixin.pug
+
+block project-content
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      .d-flex.justify-content-between
+        p.project-details-title Bike Store
+        +project-links-mixin(
+          'https://bikestore-fe.herokuapp.com/',
+          ['https://github.com/SilviuIordache/bikestore-fe', 'https://github.com/SilviuIordache/bikestore-be'])
+      p.pf-muted-bright.mb-2 side project
+      .tech-item Vue.js
+      .tech-item Pug
+      .tech-item Stylus
+      .tech-item Bootstrap
+      .tech-item Node.js
+      .tech-item Express
+      .tech-item MongoDB
+      .tech-item Mongoose
+      .tech-item Heroku
+      .tech-item Cloudinary
+
+      .pf-white.mt-4 
+        p An online bike store where you can browse mountain bikes and add them to the shoppinh cart. Admins can upload new bikes to the store. 
+      
+      a.filled-cta(href='https://bikestore-fe.herokuapp.com/' target="_blank" rel="noopener") See live
+
+    .col-12.col-md-6
+      +project-image('/assets/projects/bikestore/bike-store.png', 'The store page with product cards')
+
+  .row.pf-white.project-section
+    .col-12.mb-3
+      h3.project-heading.mb-2 Sub-projects
+      p.pf-white The Bike store app consists of 2 sub-projects:
+    .col-12.col-md-6.mb-3
+      h5.pf-primary Bike store (front-end)
+      p.mb-0 The bike store Vue.js app
+      +link-mixin('https://www.bytesroute.com')
+    .col-12.col-md-6.mb-3
+      h5.pf-primary API (back-end)
+      p.mb-0 An API backend built with Node.js, Express and MongoDB
+      +link-mixin('https://www.bytesroute.com')
+
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/projects/bikestore/bike-cart.png', 'The shopping cart')
+
+    .col-12.col-md-6.mb-5
+      h3.project-heading Features
+      ul.pf-muted-faded.pl-3
+        li store-app with products
+        li fast and performant querying system of the database
+        li image upload in forms with preview and size validations
+        li responsive web-page
+        li RESTful API implementation
+        li image hosting in a cloud-based service (Cloudinary)
+        li shopping cart implementation
+
+  .row.project-section
+    .col-12
+      h3.project-heading Screenshots
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bikestore/bike-api.png', 'Backend routes')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bikestore/bike-cart.png', 'Login form')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bikestore/bike-product-page.png', 'The store page of specific bike')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bikestore/bike-store.png', 'The bike store')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/bikestore/bike-upload.png', 'Uploading a new bike product to the store')

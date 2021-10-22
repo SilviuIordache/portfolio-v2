@@ -1,0 +1,16 @@
+extends ./main.pug
+block head
+  include ../includes/head.pug
+  include ../includes/common-scripts.pug
+block header
+  include ../includes/header.pug
+  +header(false)
+block content
+  section.container
+    .row.mt-5
+      .col-12.my-5
+        a.body-copy.link(href="/#projects") ← Return to Projects
+    block project-content
+block footer
+  include ../includes/footer.pug
+

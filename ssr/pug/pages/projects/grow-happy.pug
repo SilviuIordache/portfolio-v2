@@ -1,0 +1,62 @@
+extends ../../templates/project-details.pug 
+include ../../mixins/project-image.pug
+include ../../mixins/project-links-mixin.pug
+include ../../mixins/link-mixin.pug
+
+block project-content
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      .d-flex.justify-content-between
+        p.project-details-title Grow Happy
+        +project-links-mixin(
+          'https://grow-happy.herokuapp.com/',
+          ['https://github.com/SilviuIordache/grow'])
+      p.pf-muted-bright.mb-2 side project
+      .tech-item Vue.js
+      .tech-item VueRouter
+      .tech-item Google Firestore
+      .tech-item Pug
+      .tech-item Stylus
+      .tech-item Bootstrap
+      .tech-item Chart.js
+      .tech-item GitHub
+      .tech-item Heroku
+        
+      p.pf-white.mt-4 Grow Happy is a self reflection tool that lets users evaluate key areas of their life, set goals for lacking areas. Evaluations are aggregated into scores. Users can visualize their hapiness scores with charts and can analyize how scores evolve over time.
+
+      a.filled-cta(href='https://grow-happy.herokuapp.com/' target="_blank" rel="noopener") See live
+
+    .col-12.col-md-6
+      +project-image('/assets/projects/grow-happy/grow-happy.png', 'A view of the dashboard')
+
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/projects/grow-happy/grow-chart-2.png', 'Evaluation details')
+
+    .col-12.col-md-6.mb-5
+      h3.project-heading Features
+      ul.pf-muted-faded.pl-3
+        li front-end app built with a javascript framework: Vue.js
+        li data mapped on charts with a 3rd party library: Chart.js
+        li user auth forms (register, login) with data validation
+        li user authentication system using Firestore Authentication
+        li data persistance using Google Firestore Realtime Database
+        li responsive web design
+        li SOLID app architecture
+    
+  .row.project-section
+    .col-12
+      h3.project-heading Screenshots
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/grow-happy/grow-happy.png', 'User dashboard')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/grow-happy/grow-chart-2.png', 'Evaluation details')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/grow-happy/grow-chart-3.png', 'Charts of pillars evolution in time')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/grow-happy/grow-eval.png', 'Evaluation form in progress')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/grow-happy/grow-home.png', 'App homepage')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/projects/grow-happy/grow-auth.png', 'App register screen')
