@@ -1,4 +1,4 @@
-mixin project-image(image, description)
+mixin project-image(image, description, id)
   .outer-image-container
-    .proj-image(style=`background-image: url(${image});`)
-  p.proj-image-desc=description
+    .project-image(style=`background-image: url(${image});` data-id=id)
+  p.project-image-desc=description

@@ -1,8 +1,7 @@
 mixin project-card(name, authority, projectPage, image, coreTech, projectLink, gitLinks)
   .project-container.col-12.col-md-6.col-xl-4.mb-4
-    .project-card.position-relative.h-100
-      //- a.project-image-overlay(href=projectPage)
-      a.inner-container(href=projectPage)
+    .project-card.position-relative.h-100.w-100
+      a.project-inner-container(href=projectPage)
         .image-container(style=`background-image: url(${image});`)
         .bottom-container
           p.project-title=name

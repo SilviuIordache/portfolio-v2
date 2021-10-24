@@ -2,6 +2,7 @@ extends ../../templates/project-details.pug
 include ../../mixins/project-image.pug
 include ../../mixins/project-links-mixin.pug
 include ../../mixins/link-mixin.pug
+include ../../mixins/carousel-mixin.pug
 
 block project-content
   .row.project-section
@@ -32,7 +33,10 @@ block project-content
       a.filled-cta(href='https://www.bytesroute.com/' target="_blank" rel="noopener") See live
 
     .col-12.col-md-6
-      +project-image('/assets/projects/bytesroute/brt-dashboard-1.png', 'A view of the dashboard app')
+      +project-image(
+        '/assets/projects/bytesroute/brt-dashboard-1.png',
+        'A view of the dashboard app',
+        '1')
 
   .row.pf-white.project-section
     .col-12.mb-3
@@ -117,3 +121,10 @@ block project-content
     .col-12.col-md-6.col-xl-4.mb-5
       +project-image('/assets/projects/bytesroute/brt-docs.png', 'Product documentation')
 
+  +carousel-mixin(
+    [
+      '/assets/projects/bytesroute/brt-dashboard-1.png',
+      '/assets/projects/bytesroute/brt-dashboard-1.png',
+      '/assets/projects/bytesroute/brt-dashboard-1.png'
+    ]
+  )
