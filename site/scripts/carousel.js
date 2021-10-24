@@ -21,8 +21,7 @@ const carouselTriggers = document.getElementsByClassName('outer-image-container'
 
 // show carousel modal
 function displayCarousel() {
-  const carousel = document.getElementById('carousel-outer-container');
-  carousel.style.display = 'block';
+  carouselContainer.style.display = 'block';
 
   carouselContainer.classList.remove('animation-fadeout');
   carouselContainer.classList.add('animation-fadein');
@@ -36,9 +35,9 @@ function closeCarousel() {
 
   // after animation duration hide the element
   setTimeout(() => {
-    carouselContainer.style.display = 'none';
     document.body.classList.toggle('scroll-lock');
-  }, 250)
+    carouselContainer.style.display = 'none';
+  }, 200)
 }
 
 
