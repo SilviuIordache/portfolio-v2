@@ -14,8 +14,9 @@ sections.forEach( section => {
 // on scroll, determine which section is currently in view
 window.addEventListener('scroll', () => {
   let sectionInView = '';
+  const extraOffset = 100;
   sectionInView = secDetails.find( (section) => {
-    return section.offsetTop > (pageYOffset - section.height / 3 )
+    return section.offsetTop > (pageYOffset - section.height / 3  + extraOffset) 
   });
   
   if (sectionInView) {
