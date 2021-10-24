@@ -11,6 +11,8 @@
 
   .project-inner-container
     width 100%
+    &:hover
+      text-decoration none
 
     .image-container
       z-index 9
@@ -27,7 +29,18 @@
       display block
       background-color $pf-muted-dark
       padding 1rem 1rem
+      
 
       .project-title
+        font-size 1.4rem
+        font-weight 500
         color $pf-white
+        margin-bottom 0.4rem
+
+      .tech-container
+        .card-tech
+          color $pf-muted-bright
+          font-size 0.8rem
+          display inline
+          margin-right 0.5rem
     
