@@ -3,6 +3,7 @@ block head
   include ../includes/head.pug
   include ../includes/common-scripts.pug
   include ../includes/project-details-scripts.pug
+  include ../mixins/carousel-mixin.pug
 block header
   include ../includes/header.pug
   +header(false)
@@ -12,6 +13,7 @@ block content
       .col-12.my-5
         a.body-copy.link(href="/#projects") ← Return to Projects
     block project-content
+    +carousel-mixin
 block footer
   include ../includes/footer.pug
 
