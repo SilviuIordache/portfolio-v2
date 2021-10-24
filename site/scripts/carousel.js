@@ -13,8 +13,36 @@ function initCarousel() {
   }).mount();
 }
 
+const carouselContainer = document.getElementById('carousel-outer-container');
+const carouselCloseButton = document.getElementById('carousel-close');
 const carouselTriggers = document.getElementsByClassName('outer-image-container');
 
+// ----- FUNCTIONS -----
+
+// show carousel modal
+function displayCarousel() {
+  const carousel = document.getElementById('carousel-outer-container');
+  carousel.style.display = 'block';
+
+  carouselContainer.classList.remove('animation-fadeout');
+  carouselContainer.classList.add('animation-fadein');
+}
+
+// close carousel modal
+function closeCarousel() {
+  // play animations
+  carouselContainer.classList.remove('animation-fadein');
+  carouselContainer.classList.add('animation-fadeout');
+
+  // after animation duration hide the element
+  setTimeout(() => {
+    carouselContainer.style.display = 'none';
+    document.body.classList.toggle('scroll-lock');
+  }, 250)
+}
+
+
+// ------ ADD EVENT LISTENERS ------
 [...carouselTriggers].forEach((btn) => {
   btn.addEventListener('click', (e) => {
     // grab image ID
@@ -24,8 +52,7 @@ const carouselTriggers = document.getElementsByClassName('outer-image-container'
     const imagePath = e.target.dataset.path;
 
     // toggle carousel into view on click
-    const carousel = document.getElementById('carousel-outer-container');
-    carousel.style.display = 'block';
+    displayCarousel();
 
     // set carousel image src to the path grabbed above
     const zoomedImage = document.getElementById('zoomed-image');
@@ -38,17 +65,6 @@ const carouselTriggers = document.getElementsByClassName('outer-image-container'
     // initCarousel()
   })
 });
-
-
-
-// close carousel modal logic
-const carouselContainer = document.getElementById('carousel-outer-container');
-const carouselCloseButton = document.getElementById('carousel-close');
-
-function closeCarousel() {
-  carouselContainer.style.display = 'none';
-  document.body.classList.toggle('scroll-lock');
-}
 
 carouselCloseButton.addEventListener('click', () => {
   closeCarousel();
