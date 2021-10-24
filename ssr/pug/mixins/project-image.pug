@@ -1,4 +1,4 @@
 mixin project-image(image, description, id)
   .outer-image-container
-    .project-image(style=`background-image: url(${image});` data-id=id)
+    .project-image(style=`background-image: url(${image});` data-id=id data-path=image)
   p.project-image-desc=description

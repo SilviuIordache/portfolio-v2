@@ -20,9 +20,16 @@ const carouselTriggers = document.getElementsByClassName('outer-image-container'
     // grab image ID
     const imageID = e.target.dataset.id;
 
+    // grab image path
+    const imagePath = e.target.dataset.path;
+
     // toggle carousel into view on click
     const carousel = document.getElementById('carousel-outer-container');
     carousel.style.display = 'block';
+
+    // set carousel image src to the path grabbed above
+    const zoomedImage = document.getElementById('zoomed-image');
+    zoomedImage.src = imagePath;
 
     // disable scrolling when the modal is open
     document.body.classList.toggle('scroll-lock');
@@ -33,7 +40,8 @@ const carouselTriggers = document.getElementsByClassName('outer-image-container'
 });
 
 
-// carousel close modal logic
+
+// close carousel modal logic
 const carouselContainer = document.getElementById('carousel-outer-container');
 const carouselCloseButton = document.getElementById('carousel-close');
 
