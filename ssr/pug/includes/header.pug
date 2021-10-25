@@ -5,9 +5,9 @@ mixin header(showNav)
     if showNav
       ul#header-items-container.my-ul.mr-4.mb-0.d-none.d-lg-block
         li.header-li
-          a.header-item.active(href="#intro") intro
-        li.header-li
-          a.header-item(href="#about") about
+          a.header-item.active(href="#about") about
+        //- li.header-li
+        //-   a.header-item(href="#about") about
         li.header-li
           a.header-item(href="#projects") projects
         li.header-li
@@ -18,7 +18,7 @@ mixin header(showNav)
           rect(y='30' width='100' height='10' rx='5')
           rect(y='60' width='100' height='10' rx='5' color='pink')
         #hamburger-menu
-          a.ham-item(href="#intro") intro
           a.ham-item(href="#about") about
+          //- a.ham-item(href="#about") about
           a.ham-item(href="#projects") projects
           a.ham-item(href="#contact") contact

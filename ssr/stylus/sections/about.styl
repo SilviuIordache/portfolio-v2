@@ -1,5 +1,21 @@
 #about
-  margin-top 12rem
+  margin-top 14rem
+@media (max-width: 768px)
+  #about
+    margin-top 10rem
+
+.about-secondary
+  font-size 1.5rem
+
+.big-name
+  font-size 3.5rem
+  color $pf-white
+  margin-bottom 0
+@media (max-width: 768px)
+  .big-name
+    font-size 2.5rem
+
+
 
 #profile-pic-container
   position relative
@@ -27,9 +43,10 @@
     image-rendering pixelated
 
 .tech-pill
-  color $pf-secondary
-  padding 0.5rem 1rem
-  border 1px solid $pf-secondary
+  font-size 0.9rem
+  color $pf-muted-bright
+  padding 0.4rem 0.8rem
+  border 1px solid $pf-muted-bright
   border-radius 1rem
   margin-right 0.5rem
   margin-bottom 0.5rem
