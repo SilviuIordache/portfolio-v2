@@ -9,7 +9,7 @@ const hamItems = document.getElementsByClassName('ham-item');
 function openHamburger() {
   hamMenu.classList.toggle('show-hamburger');
   content.classList.toggle('blur');
-  body.classList.add('scroll-lock');
+  body.classList.toggle('scroll-lock');
   hamOpen.classList.toggle('d-none');
   hamClose.classList.toggle('d-none');
 }
@@ -17,7 +17,7 @@ function openHamburger() {
 function closeHamurger() {
   hamMenu.classList.remove('show-hamburger');
   content.classList.remove('blur');
-  body.classList.remove('scroll-lock');
+  body.classList.toggle('scroll-lock');
   hamOpen.classList.toggle('d-none');
   hamClose.classList.toggle('d-none');
 }
