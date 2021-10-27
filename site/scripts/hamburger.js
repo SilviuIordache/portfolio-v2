@@ -3,15 +3,28 @@ const menu = document.getElementById('hamburger-menu');
 const content = document.getElementById('content');
 const hamItems = document.getElementsByClassName('ham-item');
 
-trigger.addEventListener('click', () => {
+function openHamburger() {
   menu.classList.toggle('show-hamburger');
   content.classList.toggle('blur');
-});
+  document.body.classList.add('scroll-lock');
+}
 
+function closeHamurger() {
+  menu.classList.remove('show-hamburger');
+  content.classList.remove('blur');
+  document.body.classList.remove('scroll-lock');
+}
+
+trigger.addEventListener('click', () => {
+  openHamburger();
+});
 
 [...hamItems].forEach((hamItem) => {
   hamItem.addEventListener('click', () => {
-    menu.classList.remove('show-hamburger');
-    content.classList.remove('blur');
+    closeHamurger();
   });
+});
+
+content.addEventListener('click', () => {
+  closeHamurger();
 })
