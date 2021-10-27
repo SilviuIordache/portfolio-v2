@@ -31,8 +31,3 @@ trigger.addEventListener('click', () => {
     closeHamurger();
   });
 });
-
-content.addEventListener('click', () => {
-  closeHamurger();
-});
-
