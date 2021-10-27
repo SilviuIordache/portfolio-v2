@@ -1,18 +1,25 @@
 const trigger = document.getElementById('hamburger-trigger');
-const menu = document.getElementById('hamburger-menu');
+const hamOpen = document.getElementById('ham-open');
+const hamClose = document.getElementById('ham-close');
+const hamMenu = document.getElementById('hamburger-menu');
 const content = document.getElementById('content');
+const body = document.body;
 const hamItems = document.getElementsByClassName('ham-item');
 
 function openHamburger() {
-  menu.classList.toggle('show-hamburger');
+  hamMenu.classList.toggle('show-hamburger');
   content.classList.toggle('blur');
-  document.body.classList.add('scroll-lock');
+  body.classList.add('scroll-lock');
+  hamOpen.classList.toggle('d-none');
+  hamClose.classList.toggle('d-none');
 }
 
 function closeHamurger() {
-  menu.classList.remove('show-hamburger');
+  hamMenu.classList.remove('show-hamburger');
   content.classList.remove('blur');
-  document.body.classList.remove('scroll-lock');
+  body.classList.remove('scroll-lock');
+  hamOpen.classList.toggle('d-none');
+  hamClose.classList.toggle('d-none');
 }
 
 trigger.addEventListener('click', () => {
@@ -27,4 +34,5 @@ trigger.addEventListener('click', () => {
 
 content.addEventListener('click', () => {
   closeHamurger();
-})
+});
+
