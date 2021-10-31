@@ -1,25 +1,29 @@
-$animDuration = 0.25s
+$animDuration = 1s
 
-.animation-fadein
-  animation fadein $animDuration
+.anim-fadein-left
+  animation fadein-left $animDuration
 
-.animation-fadeout
-  animation fadeout $animDuration
+.anim-fadein-right
+  animation fadein-right $animDuration
   
-@keyframes fadein {
+@keyframes fadein-left {
   from {
+    transform translateX(-70%)
     opacity 0
   }
   to {
+    transform translateX(0%)
     opacity 1
   }
 }
 
-@keyframes fadeout {
+@keyframes fadein-right {
   from {
-    opacity 1
+    transform translateX(+70%)
+    opacity 0
   }
   to {
-    opacity 0
+    transform translateX(0%)
+    opacity 1
   }
 }
