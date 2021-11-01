@@ -29,7 +29,7 @@ block project-content
       .pf-white.mt-4
         p Bytes Route is a free SaaS for building and deploying product tours for websites and web-applications, without any coding background. 
         
-        p It consists of a Vue.js dashboard, a Chrome extension used as the tour builder, a script for integrating with your website, a Node.js backend and a presentation website
+        p The app consists of 5 sub-projects: a website, a Vue.js app, an Express API, a vanillaJS script and a Chrome extension used as the tour builder. More info on each project is found below.
       
       a.filled-cta(href='https://www.bytesroute.com/' target="_blank" rel="noopener") See live
 
@@ -39,45 +39,104 @@ block project-content
         'A view of the dashboard app',
         '1')
 
-  .row.pf-white.project-section
-    .col-12.mb-3
-      h3.project-heading.mb-2 Sub-projects
-      p.pf-white Bytes Route consists of several sub-projects:
-    .col-12.col-md-6.mb-3
-      h5.pf-primary Website
-      p.mb-0 A presentation website containing info about the product, built with vanilla JS, pug and stylus. Features a main page, a blog and docs.
-      +link-mixin('https://www.bytesroute.com')
-    .col-12.col-md-6.mb-4
-      h5.pf-primary Dashboard app
-      p.mb-0 An front-end app built with Vue.Js where users authenticate, manage created product tours, manage team members, custom styles and more.
-      +link-mixin('https://www.bytesroute.com/app')
-    .col-12.col-md-6.mb-4
-      h5.pf-primary Tour creator
-      p.mb-0 This is a Chrome extension that Bytes Route clients use to build, edit and test tours for their websites. This was built with Vuejs, vanillaJS, pug and stylus.
-      +link-mixin('https://chrome.google.com/webstore/detail/bytes-route-free-digital/kfdoklilbkbflmbmkinaojhdhkojlhbh?hl=en', 'Chrome extension')
-    .col-12.col-md-6.mb-4
-      h5.pf-primary Backend (API)
-      p.mb-0 Built with Nodejs, Express, MongoDB and Mongoose. Responsible for CRUD operations called from the Dashboard app and the Chrome extension
-    .col-12.col-md-6.mb-4
-      h5.pf-primary Script
-      p.mb-0 The script is written in VanillaJS. It is responsible for tour creation and tour running. Bytes Route users receive a script with a custom id that they can integrate in their apps to enable tours running on Bytes Route..
+  .pf-white.project-section
+    .row.sub-project
+      .col-12.col-md-6.mb-3
+        h5.pf-primary 1. Bytes Route website
+        .tech-used
+          .tech-item Pug
+          .tech-item Stylus
+          .tech-item Bootstrap
+          .tech-item Heroku
+        p.mb-0 A presentation website containing info about the product
+        +link-mixin('https://www.bytesroute.com')
 
-  .row.project-section
-    .col-12.col-md-6.mb-5
-      +project-image('/assets/web-projects/bytesroute/brt-analytics.png')
+        p.sub-proj-features Features:
+        ul
+          li landing page #[a.link(href='https://www.bytesroute.com/') (link)]
+          li how-it-works page #[a.link(href='https://www.bytesroute.com/how-to-use-bytes-route.html') (link)]
+          li blog #[a.link(href='https://www.bytesroute.com/blog/') (link)]
+          li docs #[a.link(href='https://www.bytesroute.com/docs/') (link)]
+          li responsive website: mobile friendly, performant Lighthouse scores
+      .col-12.col-md-6.mb-3
+        +project-image('/assets/web-projects/bytesroute/brt-landing.png', 'Presentation page: landing page')
+     
+    .row.sub-project
+      .col-12.col-md-6.mb-4.order-lg-2
+        h5.pf-primary 2. Dashboard app
+        .tech-used
+          .tech-item Vue.js
+          .tech-item Bootstrap
+          .tech-item Node.js
+          .tech-item Pug
+          .tech-item Stylus
+          .tech-item Heroku
+        p.mb-0 An front-end app built with Vue.Js where users authenticate, manage created product tours, manage team members, customize tour styles, apply tour language, manage subscriptions and more.
+        +link-mixin('https://www.bytesroute.com/app')
+        p.sub-proj-features Features:
+        ul
+          li SOLID app architecture
+          li auth forms: register, login, pass reset, pass recover
+          li large-sized Vue.js app
+          li used VueRouter for managing view changes
+          li used VueX for better component state handling
+          li tour analytics
+      .col-12.col-md-6.mb-3
+        +project-image('/assets/web-projects/bytesroute/brt-dashboard-2.png', 'The dashboard app')
+      
+    .row.sub-project
+      .col-12.col-md-6.mb-4
+        h5.pf-primary 3. Tour creator (Chrome extension)
+        .tech-used
+          .tech-item Vue.js
+          .tech-item Pug
+          .tech-item Stylus
+          .tech-item Chrome API
+          .tech-item JS
+          .tech-item web-components
+        p.mb-0 A Chrome extension that Bytes Route clients use to build, edit, and test tours for their websites. Contains an algorithm that searches for DOM elements and saves unique references to them.
+        +link-mixin('https://chrome.google.com/webstore/detail/bytes-route-free-digital/kfdoklilbkbflmbmkinaojhdhkojlhbh?hl=en', 'Chrome extension store link')
 
-    .col-12.col-md-6.mb-5
-      h3.project-heading Features
-      ul.pf-muted-faded.pl-3
-        li large-scale Vue.js app
-        li back-end API using Node.js and Express
-        li user-generated content: product tours
-        li Chrome extension addon: used to build tours
-        li user authenthication system
-        li team management system
-        li theme style editing, edit the color scheme of the tour pop-ups to match your brand identity
-        li multilanguage feature, set your tours to run in multiple languages
-        li unit tests
+        p.sub-proj-features Features
+        ul
+          li Chrome extension
+          li Tour builder
+          li DOM manipulation
+          li element selector
+      .col-12.col-md-6.mb-4
+        +project-image('/assets/web-projects/bytesroute/brt-extension.png', 'BRT extension')
+        
+
+    .row.sub-project
+      .col-12.col-md-6.mb-4.order-lg-2
+        h5.pf-primary 4. Bytes Route backend
+        .tech-used
+          .tech-item NodeJS
+          .tech-item Express
+          .tech-item MongoDB
+          .tech-item Mongoose
+          .tech-item Mocha
+          .tech-item Chai
+          .tech-item Heroku
+        p.mb-0 A RESTful API handling responsible for CRUD operations called  from the Dashboard app, the Chrome extension and the Script.
+
+        p.sub-proj-features Features:
+        ul
+          li RESTful API
+          li handling of multiple documents: users, tours, teams, styles, subscriptions, languages
+          li unit tests using Mocha and Chai
+      .col-12.col-md-6.mb-4
+        +project-image('/assets/web-projects/bytesroute/node-express.png')
+
+    .row.sub-project
+      .col-12.col-md-6.mb-4
+        h5.pf-primary 5. Bytes Route script
+        .tech-used
+          .tech-item ES6
+          .tech-item Web Components
+        p.mb-0 This script is responsible for the tour creation and tour running. Bytes Route users receive a script with a custom id that they can integrate in their apps to enable tours running on Bytes Route.
+      .col-12.col-md-6.mb-4
+        +project-image('/assets/web-projects/bytesroute/javascript-generic.jpeg')
     
   .row.project-section
     .col-12
@@ -121,4 +180,6 @@ block project-content
       +project-image('/assets/web-projects/bytesroute/brt-blog.png', 'Blog posts page')
     .col-12.col-md-6.col-xl-4.mb-5
       +project-image('/assets/web-projects/bytesroute/brt-docs.png', 'Product documentation')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/web-projects/bytesroute/brt-extension.png', 'BRT extension')
 
