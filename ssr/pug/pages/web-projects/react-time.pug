@@ -1,0 +1,50 @@
+extends ../../templates/project-details.pug 
+include ../../mixins/project-image.pug
+include ../../mixins/project-links-mixin.pug
+include ../../mixins/link-mixin.pug
+
+block project-content
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      .d-flex.justify-content-between
+        p.project-details-title React Time
+        +project-links-mixin(
+          'https://simple-react-time.herokuapp.com/',
+          ['https://github.com/SilviuIordache/ReactTime'])
+      p.pf-muted-bright.mb-2 side project
+      .tech-item React 17.0
+      .tech-item React Router
+      .tech-item Bootstrap 5
+
+      .pf-white.mt-4 
+        p A time app featuring 3 functions: clock, countdown, and timer. The application is built using React v17.0
+
+      a.filled-cta(href='https://simple-react-time.herokuapp.com/' target="_blank" rel="noopener") See live
+
+    .col-12.col-md-6
+      +project-image('/assets/web-projects/react-time/react-timer.png', 'Timer function with split times')
+
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/web-projects/react-time/react-countdown.png', 'Countdown function')
+
+    .col-12.col-md-6.mb-5
+      h3.project-heading Features
+      ul.pf-muted-faded.pl-3
+        li Switching views with React Router
+        li Use of React hooks
+        li Timer feature with split times
+        li Countdown feature
+        li Local time clock feature
+
+
+  .row.project-section
+    .col-12
+      h3.project-heading Screenshots
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/web-projects/react-time/react-countdown.png', 'Countdown function')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/web-projects/react-time/react-timer.png', 'Timer function with split times')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/web-projects/react-time/react-clock.png', 'Basic clock function')
