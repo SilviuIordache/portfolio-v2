@@ -1,0 +1,41 @@
+extends ../../templates/project-details.pug 
+include ../../mixins/project-image.pug
+include ../../mixins/project-links-mixin.pug
+include ../../mixins/link-mixin.pug
+
+block project-content
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      .d-flex.justify-content-between
+        p.project-details-title React ToDo
+        +project-links-mixin(
+          'https://basic-react-todo-list.herokuapp.com/',
+          ['https://github.com/SilviuIordache/ReactToDo'])
+      p.pf-muted-bright.mb-2 side project
+      .tech-item React 17.0
+      .tech-item Bootstrap 5
+
+      .pf-white.mt-4 
+        p A to do list app with all the basic functionalities. This was my second project ever made in React. It was a nice exercise into getting used with the core features and paradigms of the framework.
+
+      a.filled-cta(href='https://basic-react-todo-list.herokuapp.com/' target="_blank" rel="noopener") See live
+
+    .col-12.col-md-6
+      +project-image('/assets/web-projects/react-todo/react-todo.png', 'The to do list app made in React')
+
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/web-projects/react-todo/react-todo-delete.png', 'Delete confirmation before deleting all items in the list')
+
+    .col-12.col-md-6.mb-5
+      h3.project-heading Features
+      ul.pf-muted-faded.pl-3
+        li Add items in the list
+        li Check/uncheck completion
+        li delete item
+        li edit item
+        li delete all items
+        li delete all completed items
+        li toggle check/uncheck on all items
+        li confirmation before destructive actions
+        li completion progress
