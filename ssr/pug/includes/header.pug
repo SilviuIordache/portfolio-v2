@@ -9,9 +9,11 @@ mixin header(showNav)
         li.header-li
           a.header-item(href="#projects") projects
         li.header-li
-          a.header-item(href="#resume") resume
-        li.header-li
           a.header-item(href="#contact") contact
+        li.header-li
+          a.filled-cta.mr-4(href='./resume/Silviu_Iordache_resume.pdf' target='_blank')
+            i.fas.fa-file.mr-2
+            span Resume
       #hamburger-container.d-block.d-lg-none
         #hamburger-trigger.mr-4
           #ham-open
@@ -21,5 +23,5 @@ mixin header(showNav)
         #hamburger-menu
           a.ham-item(href="#about") about
           a.ham-item(href="#projects") projects
-          a.ham-item(href="#resume") resume
           a.ham-item(href="#contact") contact
+          a.ham-item(href='./resume/Silviu_Iordache_resume.pdf' target='_blank') resume
