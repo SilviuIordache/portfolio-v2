@@ -1,0 +1,58 @@
+extends ../../templates/project-details.pug 
+include ../../mixins/project-image.pug
+include ../../mixins/project-links-mixin.pug
+include ../../mixins/link-mixin.pug
+
+block project-content
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      .d-flex.justify-content-between
+        p.project-details-title Painty
+        +project-links-mixin(
+          'https://painty-app.herokuapp.com/',
+          ['https://github.com/SilviuIordache/painty'])
+      p.pf-muted-bright.mb-2 side project
+      .tech-item ReactJS
+      .tech-item ReactRouter
+      .tech-item React Hooks
+      .tech-item Bootstrap
+      .tech-item Canvas API
+        
+      p.pf-white.mt-4 Painty is a drawing game app that challenges players to draw paintings of a word in 30 seconds or less. After 3 rounds, the players can see what they managed to draw. A practice mode with unlimited time is also available.
+      a.filled-cta(href='https://painty-app.herokuapp.com/' target="_blank" rel="noopener") See live
+
+    .col-12.col-md-6
+      +project-image('/assets/web-projects/painty/gallery.png', 'A view of the drawing gallery')
+
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/web-projects/painty/drawing-1.png', 'A drawing made inside the paint editor')
+
+    .col-12.col-md-6.mb-5
+      h3.project-heading Features
+      ul.pf-muted-faded.pl-3
+        li front-end app built React, using React Hooks and React Router
+        li implementation of 2 game modes
+        li game mode 1: Challenge mode, where users have to draw a word from a random set in under 30 seconds
+        li game mode 2: Practice/Free mode where users can practice their drawing skills with unlimited time
+        li implementation of a detailed drawing view that display more info about the painting.
+        li use of Canvas API
+        li SOLID architecture
+        li saving of images into urls
+        li option to SAVE, DELETE and DOWNLOAD images
+        li size calculation and display of each image
+    
+  .row.project-section
+    .col-12
+      h3.project-heading Screenshots
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/web-projects/painty/drawing-1.png', 'A drawing of a landscape')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/web-projects/painty/drawing-2.png', 'A drawing of a zebra')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/web-projects/painty/drawing-details.png', 'The drawing details view')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/web-projects/painty/menu.png', 'The start menu')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/web-projects/painty/gallery.png', 'The gallery collection view')
