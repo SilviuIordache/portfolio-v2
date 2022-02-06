@@ -1,0 +1,98 @@
+extends ../../templates/project-details.pug 
+include ../../mixins/project-image.pug
+include ../../mixins/project-links-mixin.pug
+include ../../mixins/link-mixin.pug
+
+block project-content
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      .d-flex.justify-content-between
+        p.project-details-title Need for Speed: Heat
+      p.pf-muted-bright.mb-2 Electronic Arts
+      .tech-item PS4
+      .tech-item XBOX
+      .tech-item PC
+      .tech-item video game
+      .tech-item game design
+      .tech-item level design
+      .tech-item UX
+
+      .pf-white.mt-4 
+        p Need for Speed Heat (stylised as NFS Heat) is a 2019 racing video game developed by Ghost Games and published by Electronic Arts for Microsoft Windows, PlayStation 4 and Xbox One. It is the twenty-fourth instalment in the Need for Speed series and commemorates the series' 25th anniversary. 
+
+        p The project was done over a period of 2 year with a team of 200 people from Romania, UK and Sweden: designers, graphical artists, software engineers, QAs and more.
+
+      .button-group
+        a.filled-cta(href='https://www.ea.com/games/need-for-speed/need-for-speed-heat' target="_blank" rel="noopener") Website
+        a.filled-cta.ml-2(href='https://www.mobygames.com/game/windows/nfs-heat/credits' target="_blank" rel="noopener") Credits
+
+    .col-12.col-md-6.d-flex.align-items-center
+      iframe(width='560' height='315' src='https://www.youtube.com/embed/04KPiGmC7Lc' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
+
+
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/game-projects/heat/cover-art.jpeg', 'Illustration of the 2 game modes: day and night')
+
+    .col-12.col-md-6.mb-5
+      h3.project-heading Game Features
+      ul.pf-muted-faded.pl-3
+        li High-octane racing and story
+        li Two main game modes: day sanctione races and illegal night races
+        li Single-player and multi-player action
+        li Car customization
+        li Free-roam open world
+        li Challenge AIs or other players to races
+        li Cop chase game modes
+        li Collectibles challenges
+
+  .row.project-section
+    .col-12.col-md-6.mb-5.pf-muted-faded
+      h3.project-heading My work
+      p I designed and help implement by collaborating with graphical artists and software engineers some game features and game content:
+
+      a.link.mr-1 Online Game Mode: Speedlists
+      ul.pl-3
+        li I was responsible for improving the Speedlists game mode
+        li I designed new flows and a more fun way to play online in teams
+
+      a.link.mr-1 Social Garage feature
+      ul.pl-3
+        li A social feature that let players customize their car garages.
+        li I explored the concept of a customisable garage that acted as a social space where friends could visit and appreciate your awards
+
+        
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/game-projects/heat/garage-2.jpeg', 'The social garage in the final game')
+
+  .row.project-section
+    .col-12
+      h3.project-heading Screenshots and Concepts
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/heat/art-1.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/heat/art-2.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/heat/concept-1.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/heat/concept-2.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/heat/cover-art.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/heat/gameplay-2.webp')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/heat/gameplay.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/heat/garage-2.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/heat/garage-3.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/heat/garage.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/heat/qwe.jpeg')
+
+
+
+
