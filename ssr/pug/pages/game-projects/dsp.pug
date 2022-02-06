@@ -1,0 +1,87 @@
+extends ../../templates/project-details.pug 
+include ../../mixins/project-image.pug
+include ../../mixins/project-links-mixin.pug
+include ../../mixins/link-mixin.pug
+
+block project-content
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      .d-flex.justify-content-between
+        p.project-details-title Driver: Speedboat Paradise
+      p.pf-muted-bright.mb-2 Ubisoft
+      .tech-item iOS
+      .tech-item Android
+      .tech-item video game
+      .tech-item game design
+      .tech-item level design
+      .tech-item UX
+
+      .pf-white.mt-4 
+        p Driver: Speedboat Paradise is a high octane boat racing game where you try to make your way up the world of boat-racing, while collecting and upgrading your vehicles.
+
+        p The project was done over a period of 1 year with a team of 30 people from Romania and France: designers, graphical artists, software engineers, QAs and more.
+        
+        p The game was released for iOS, Android, Windows Phone and the browser. It was available for download for 5 years on the mobile marketplaces, until it was eventually taken down. It is still available to download and and install on some websites.
+      .button-group
+        a.filled-cta(href='https://driver-speedboat-paradise.en.uptodown.com/android' target="_blank" rel="noopener") Download
+        a.filled-cta.ml-2.mt-3.mt-lg-0(href='https://driver.fandom.com/wiki/Driver:_Speedboat_Paradise' target="_blank" rel="noopener") Wiki
+
+    .col-12.col-md-6.d-flex.align-items-center
+      iframe(width='560' height='315' src='https://www.youtube.com/embed/Gm3x82vaadc' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/game-projects/driver/cover.jpeg', 'Game cover')
+
+    .col-12.col-md-6.mb-5
+      h3.project-heading Game Features
+      ul.pf-muted-faded.pl-3
+        li Beautiful game graphics
+        li A plethora of race boats to unlock, buy, upgrade, customize and race
+        li A thriller story involving the Miami Mafia
+        li Multiple game modes: Circuits, Drag Races, Boss Battles
+
+  .row.project-section
+    .col-12.col-md-6.mb-5.pf-muted-faded
+      h3.project-heading My work
+      p I designed and help implement by collaborating with graphical artists and software engineers multiple game features and game content:
+      ul.pl-3
+        li Researched location theme and implemented two thirds of the game race-levels.
+        li Fine tuned racer AI to match the skill of the player
+        li Collectibles mini-game
+        li Game achievements system
+        li Weekly challenges
+        li Weekly bonus rewards menu
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/game-projects/driver/weekly.jpeg', 'One of the levels I designed: a skull island group')
+
+  .row.project-section
+    .col-12
+      h3.project-heading Screenshots and Concepts
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/driver/cover.jpeg', 'Game cover')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/driver/achievements.png', 'Achievements system')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/driver/appstore.png', 'Featured on the AppStore front page')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/driver/credits.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/driver/collect.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/driver/drag.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/driver/flow.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/driver/game-1.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/driver/game-2.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/driver/game-3.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/driver/level-2.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/driver/level-3.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/driver/level.png')

@@ -1,0 +1,103 @@
+extends ../../templates/project-details.pug 
+include ../../mixins/project-image.pug
+include ../../mixins/project-links-mixin.pug
+include ../../mixins/link-mixin.pug
+
+block project-content
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      .d-flex.justify-content-between
+        p.project-details-title Need for Speed: Payback
+      p.pf-muted-bright.mb-2 Electronic Arts
+      .tech-item PS4
+      .tech-item XBOX
+      .tech-item PC
+      .tech-item video game
+      .tech-item game design
+      .tech-item level design
+      .tech-item UX
+
+      .pf-white.mt-4 
+        p Need for Speed Payback is an open-world racing video game developed by Ghost Games and published by Electronic Arts for Microsoft Windows, PlayStation 4 and Xbox One. It is the twenty-third installment in the Need for Speed series.
+
+        p The project was done over a period of 2 year with a team of 200 people from Romania, UK and Sweden: designers, graphical artists, software engineers, QAs and more.
+
+      .button-group
+        a.filled-cta(href='https://www.ea.com/games/need-for-speed/need-for-speed-payback' target="_blank" rel="noopener") Website
+
+    .col-12.col-md-6.d-flex.align-items-center
+      iframe(width='560' height='315' src='https://www.youtube.com/embed/K-5EdHZ0hBs' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
+
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/game-projects/payback/garage.jpeg', 'A shot of the player garage containing the car collection')
+
+    .col-12.col-md-6.mb-5
+      h3.project-heading Game Features
+      ul.pf-muted-faded.pl-3
+        li High-octane racing and story
+        li Single-player and multi-player action
+        li Car customization
+        li Free-roam open world
+        li Challenge AIs or other players to races
+        li Cop chase game modes
+        li Collectibles challenges
+
+  .row.project-section
+    .col-12.col-md-6.mb-5.pf-muted-faded
+      h3.project-heading My work
+      p I designed and help implement by collaborating with graphical artists and software engineers some game features and game content:
+
+      a.link.mr-1(href='https://nfs.fandom.com/wiki/Need_for_Speed:_Payback/Roaming_Racers') Roaming Racers
+      ul.pl-3
+        li This is a free roam game mode where you can find and challenge AI racers to open world races.
+        li Researched and came up with the design for the AI cars.
+        li Implemented all 16 AI racers in game and fine-tuned the feature to turn it into a fun experience
+
+      a.link.mr-1(href='https://www.ea.com/games/need-for-speed/need-for-speed-payback/news/nfs-payback-multiplayer-speedlists') Multiplayer levels
+      ul.pl-3
+        li I was responsible for the implementation of all 25+ online game levels
+        li Worked closely with QAs and other team members to fine tune this content to provide the best player experience
+
+        
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/game-projects/payback/rr-2.png', 'One of the game modes I designed in action: Roaming Racers')
+
+  .row.project-section
+    .col-12
+      h3.project-heading Screenshots and Concepts
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/art-1.jpg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/cover-1.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/cover-2.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/gameplay-1.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/garage.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/map.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/mp.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/mp.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/rr-1.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/rr-2.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/rr-3.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/rr-4.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/rr-concept-2.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/rr-concept.png')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/rr.jpeg')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/payback/speed-cross.jpeg')
+
