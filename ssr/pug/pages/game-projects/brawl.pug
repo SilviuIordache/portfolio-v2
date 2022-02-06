@@ -1,0 +1,65 @@
+extends ../../templates/project-details.pug 
+include ../../mixins/project-image.pug
+include ../../mixins/project-links-mixin.pug
+include ../../mixins/link-mixin.pug
+
+block project-content
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      .d-flex.justify-content-between
+        p.project-details-title Jump Brawl
+        +project-links-mixin(
+          'https://jump-brawl.netlify.app/',
+          ['https://github.com/SilviuIordache/Brawl'])
+      p.pf-muted-bright.mb-2 side project
+      .tech-item Game Maker Language
+      .tech-item indie
+      .tech-item game jam
+      .tech-item hackathon
+
+      .pf-white.mt-4 
+        p This is a 2D game where 2 or more players take control of multiple characters at once. Each player tries to jump with their characters on top of the enemy characters in order to eliminate them. Losing lives will cause you to start losing characters. The last person standing wins.
+        
+        p Jump Brawl is a small video game I developed in 48 hours (2 working days) for the 2017 Electronic Arts Bucharest Game Jam. This game was one of the winners, getting 2nd place and an award worth 500 Euros.
+
+        p Around 15 teams participated in this contest. Each team had between 1 and 4 team members. For this one, I did it myself.
+
+        p We had 2 days to develop the games, and the games were reviewed and voted for in the 3rd day, by any willing employee. More than 100 people played and enjoyed my game.
+
+
+        p Controls: Player 1: up, left, right arrow keys, Player 2: WASD
+      .button-group
+        a.filled-cta(href='https://jump-brawl.netlify.app/' target="_blank" rel="noopener") Play
+        a.filled-cta.ml-2.mt-3.mt-lg-0(href="https://github.com/SilviuIordache/Brawl" target="_blank" rel="noopener") GitHub
+
+    .col-12.col-md-6.d-flex.align-items-center
+      +project-image('/assets/game-projects/brawl/rec.gif', 'The game in action')
+      
+
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/game-projects/brawl/2.png', 'Game in action')
+
+    .col-12.col-md-6.mb-5
+      h3.project-heading Game Features
+      ul.pf-muted-faded.pl-3
+        li 2D platforming physics
+        li Unique feature: control multiple characters at once by pressing the same keys 
+        li Playable with up to 4 players
+        li Random character customization each round
+        li Sound effects and music
+        li Game logic (with lives, and a winner)
+
+
+  .row.project-section
+    .col-12
+      h3.project-heading Screenshots and Concepts
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/brawl/1.png', 'Gameplay 1')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/brawl/2.png', 'Gameplay 2')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/brawl/jam-1.jpeg', 'Some people playing and enjoying the game at the Game Jam expo day')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/brawl/jam-2.jpeg', 'Another group of players enjoying the action')
