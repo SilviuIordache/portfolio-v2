@@ -1,0 +1,101 @@
+extends ../../templates/project-details.pug 
+include ../../mixins/project-image.pug
+include ../../mixins/project-links-mixin.pug
+include ../../mixins/link-mixin.pug
+
+block project-content
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      .d-flex.justify-content-between
+        p.project-details-title Assassin's Creed: Pirates
+      p.pf-muted-bright.mb-2 Ubisoft
+      .tech-item iOS
+      .tech-item Android
+      .tech-item video game
+      .tech-item game design
+      .tech-item level design
+      .tech-item UX
+
+      .pf-white.mt-4 
+        p Assassin's Creed Pirates is an action adventure game in which you played as a pirate travelling the Carribean seas.
+
+        p The project was done over a period of 1 year with a team of 30 people from Romania and France: designers, graphical artists, software engineers, QAs and more.
+        
+        p The game was released for iOS, Android, Windows Phone and the browser. It was available for download for 7 years on the mobile marketplaces, until it was eventually taken down. It is still available to download and and install on some websites.
+      
+      a.filled-cta(href='https://assassins-creed-pirates.en.uptodown.com/android' target="_blank" rel="noopener") Download
+
+      a.filled-cta.ml-2.mt-3.mt-lg-0(href='https://assassinscreed.fandom.com/wiki/Assassin%27s_Creed:_Pirates' target="_blank" rel="noopener") Wiki
+
+
+    .col-12.col-md-6
+      +project-image('/assets/game-projects/ac-pirates/acp-cover.jpeg', 'The protagonist on the game cover image')
+
+
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/game-projects/ac-pirates/boat-5.jpeg', 'Gameplay screenshot: travelling the carribean sea')
+
+    .col-12.col-md-6.mb-5
+      h3.project-heading Game Features
+      ul.pf-muted-faded.pl-3
+        li Beautiful game graphics
+        li Sea exploration: sailing, fishing, treasures, rescuing sailors
+        li Mini-game 1: First person boat-to-boat combat
+        li Mini-game 2: Stealth sailing, attempting to sail a boat undetected
+        li Crew assembly and management
+        li Ship customization
+        li A thrilling story
+
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      h3.project-heading My work
+      ul.pf-muted-faded.pl-3
+        li Designed and helped to implement half of the game levels.
+        li Implemented game content: Enemy-AI ships, Collectible treasures, air-gusts, etc.
+        li Research for real-life locations and landscapes and bringing them in game
+        li Created mock-ups for social menu features and in-game-currency shops.
+        li Close collaboration with graphical artists, software engineers and QAs to bring fun experiences to live.
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/game-projects/ac-pirates/map-1.jpeg', 'One of the levels I designed: a skull island group')
+
+  .row.project-section
+    .col-12
+      h3.project-heading Screenshots and Concepts
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/credits.png', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/boat-fps.jpeg', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/boat-pick.jpeg', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/combat-1.jpeg', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/combat-2.jpeg', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/map-1.jpeg', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/map-2.jpeg', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/map-6.png', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/map-7.png', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/map-8.png', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/map-9.png', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/profile.jpeg', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/shop-1.png', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/shop-2.png', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/social-1.png', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/social-2.png', '')
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/gameplay.jpeg', '')
+    
+      
+      
