@@ -17,20 +17,17 @@ block project-content
       .tech-item UX
 
       .pf-white.mt-4 
-        p Assassin's Creed Pirates is an action adventure game in which you played as a pirate travelling the Carribean seas.
+        p Assassin's Creed: Pirates is an action adventure game in which you played as a pirate travelling the Carribean seas.
 
         p The project was done over a period of 1 year with a team of 30 people from Romania and France: designers, graphical artists, software engineers, QAs and more.
         
         p The game was released for iOS, Android, Windows Phone and the browser. It was available for download for 7 years on the mobile marketplaces, until it was eventually taken down. It is still available to download and and install on some websites.
-      
-      a.filled-cta(href='https://assassins-creed-pirates.en.uptodown.com/android' target="_blank" rel="noopener") Download
+      .button-group
+        a.filled-cta(href='https://assassins-creed-pirates.en.uptodown.com/android' target="_blank" rel="noopener") Download
+        a.filled-cta.ml-2.mt-3.mt-lg-0(href='https://assassinscreed.fandom.com/wiki/Assassin%27s_Creed:_Pirates' target="_blank" rel="noopener") Wiki
 
-      a.filled-cta.ml-2.mt-3.mt-lg-0(href='https://assassinscreed.fandom.com/wiki/Assassin%27s_Creed:_Pirates' target="_blank" rel="noopener") Wiki
-
-
-    .col-12.col-md-6
-      +project-image('/assets/game-projects/ac-pirates/acp-cover.jpeg', 'The protagonist on the game cover image')
-
+    .col-12.col-md-6.d-flex.align-items-center
+      iframe(width='560' height='315' src='https://www.youtube.com/embed/UIKapqUjnQA' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
 
   .row.project-section
     .col-12.col-md-6.mb-5
@@ -62,6 +59,9 @@ block project-content
   .row.project-section
     .col-12
       h3.project-heading Screenshots and Concepts
+
+    .col-12.col-md-6.col-xl-4.mb-5
+      +project-image('/assets/game-projects/ac-pirates/acp-cover.jpeg', '')
     .col-12.col-md-6.col-xl-4.mb-5
       +project-image('/assets/game-projects/ac-pirates/credits.png', '')
     .col-12.col-md-6.col-xl-4.mb-5
