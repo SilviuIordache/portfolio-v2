@@ -1,0 +1,51 @@
+extends ../../templates/project-details.pug 
+include ../../mixins/project-image.pug
+include ../../mixins/project-links-mixin.pug
+include ../../mixins/link-mixin.pug
+
+block project-content
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      .d-flex.justify-content-between
+        p.project-details-title Rogue
+        +project-links-mixin(
+          'https://space-rogue.netlify.app/',
+          ['https://github.com/SilviuIordache/SpaceRogue'])
+      p.pf-muted-bright.mb-2 side project
+      .tech-item Game Maker Language
+      .tech-item indie
+      .tech-item bachelor project
+      .tech-item procedural
+
+      .pf-white.mt-4 
+        p This was my bachelor project. This game was built using the Game Maker Studio 2 engine. It features a procedurally generated game level in each session, making no 2 playthroughs the same.
+        p It is a 2D top down game where you take control of a space marine who is fighting against mobs of zombie aliens on an oxigen depleted space-station 
+        p Controls: WASD + left click
+        p Objectives
+        ul
+          li shoot all the monsters in each room to open the doors holding back oxygen
+          li upgrade your weapons with power-ups
+          li see how long you can last on the space station
+          
+      .button-group
+        a.filled-cta(href='https://space-rogue.netlify.app/' target="_blank" rel="noopener") Play
+        a.filled-cta.ml-2.mt-3.mt-lg-0(href="https://github.com/SilviuIordache/SpaceRogue" target="_blank" rel="noopener") GitHub
+
+    .col-12.col-md-6
+      +project-image('/assets/game-projects/rogue/game1.png', 'Gameplay screenshot')
+      
+
+  .row.project-section
+    .col-12.col-md-6.mb-5
+      +project-image('/assets/game-projects/rogue/game2.png', 'Gameplay screenshot')
+
+    .col-12.col-md-6.mb-5
+      h3.project-heading Game Features
+      ul.pf-muted-faded.pl-3
+        li 2D top down
+        li procedurally generated game levels
+        li 3 upgradeable weapons 
+        li sound effects
+        li game loop logic
+        li minimap
+        li lighting effects
