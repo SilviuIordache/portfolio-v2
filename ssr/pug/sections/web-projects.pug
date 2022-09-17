@@ -3,8 +3,17 @@ include ../mixins/project-card.pug
 section#projects.row
   .col-12
     .section-title Projects
-    p.section-info A list of projects I worked on:
   
+  +project-card(
+    'Pear.AI',
+    'Cognizant',
+    'https://www.pear.ai/',
+    '/assets/web-projects/pear-ai/pic1.png',
+    ['Vue3', 'Typescript', 'Quasar'],
+    'https://www.pear.ai/',
+    ''
+  )
+
   +project-card(
     'Bytes Route',
     'Caphyon',
@@ -94,52 +103,4 @@ section#projects.row
     ['Pug','Stylus', 'JavaScript'],
     'https://silviu-portfolio.netlify.app/',
     ['https://github.com/SilviuIordache/portfolio-v1']
-  )
-
-  +project-card(
-    "NFS: Heat",
-    'Electronic Arts',
-    '/game-projects/heat.html',
-    '/assets/game-projects/heat/art-2.jpeg',
-    ['Game Design','Level Design']
-  )
-
-  +project-card(
-    "Jump Brawl",
-    'side project',
-    '/game-projects/brawl.html',
-    '/assets/game-projects/brawl/1.png',
-    ['Game Maker Language','Hackathon']
-  )
-
-  +project-card(
-    "NFS: Payback",
-    'Electronic Arts',
-    '/game-projects/payback.html',
-    '/assets/game-projects/payback/cover-1.jpeg',
-    ['Game Design','Level Design']
-  )
-
-  +project-card(
-    "Driver: SP",
-    'Ubisoft',
-    '/game-projects/driver.html',
-    '/assets/game-projects/driver/cover.jpeg',
-    ['Game Design','Level Design']
-  )
-
-  +project-card(
-    "AC: Pirates",
-    'Ubisoft',
-    '/game-projects/acp.html',
-    '/assets/game-projects/ac-pirates/acp-cover.jpeg',
-    ['Game Design','Level Design']
-  )
-
-  +project-card(
-    "Rogue",
-    'bachelor project',
-    '/game-projects/rogue.html',
-    '/assets/game-projects/rogue/game1.png',
-    ['Game Maker Language','procedural']
   )
