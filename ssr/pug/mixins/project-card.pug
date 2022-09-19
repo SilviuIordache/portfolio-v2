@@ -5,6 +5,7 @@ mixin project-card(name, authority, projectPage, image, techs, projectLink, gitL
         .image-container(style=`background-image: url(${image});`)
         .bottom-container
           p.project-title=name
+          p.project-owner=authority
           .tech-container
             each tech in techs
               p.card-tech=tech
